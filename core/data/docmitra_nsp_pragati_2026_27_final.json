@@ -1,0 +1,2106 @@
+{
+  "_meta": {
+    "knowledge_base_id": "docmitra_nsp_pragati_2026_27",
+    "schema_version": "1.3.0",
+    "product": "DocMitra",
+    "purpose": "RAG knowledge base for the AICTE Pragati Scholarship (Technical Degree and Technical Diploma) on the National Scholarship Portal, academic year 2026-27",
+    "academic_year": "2026-27",
+    "last_researched_on": "2026-10-25",
+    "language": "en",
+    "overall_verification_summary": "No fact in this file was verified against a live 2026-27 NSP or AICTE page. Only three sources were opened in full: the NSP All-Scholarships page and the AICTE home page (both returned cached 2024-25 content) and one institute-hosted PDF containing AICTE FAQ text. Every other source was read as a search-result snippet only. 2026-27 dates and the income-year wording come from third-party pages. DocMitra must send students to the live NSP scheme listing for dates, upload limits, income-certificate year and final requirements.",
+    "verification_legend": {
+      "official_document_copy": "Text authored by AICTE or the Government, read by me in a copy or snippet (institute-hosted PDF, aicte.gov.in snippet, myScheme page). It is NOT the live 2026-27 portal page and may belong to an older cycle.",
+      "secondary_source": "Found only on third-party pages (news, coaching or aggregator sites, or a college's own summary). Not equal to an official guideline.",
+      "conflicting": "Official-type or other sources disagree. Do not state one version as fact; tell the student to confirm on NSP or with the institute.",
+      "not_found": "Could not be verified or found. Do not state as fact.",
+      "live_portal_required": "Value changes by year or form; DocMitra must tell the student to read it on the live NSP page.",
+      "mixed": "This record combines claims with different verification statuses. Consumers must use claim-level verification metadata where available and must not treat the entire record as verified merely because some claims come from an official document copy."
+    },
+    "requirement_level_legend": {
+      "officially_mandatory": "Listed as required in AICTE-authored text read for this audit (not the live 2026-27 upload page).",
+      "conditionally_required": "Required only for some students (for example lateral entry, renewal or category claim).",
+      "commonly_requested": "Appears in college or third-party checklists but not confirmed in AICTE-authored text.",
+      "not_verified": "Could not be confirmed from any reliable source."
+    },
+    "safety_rules_for_docmitra": [
+      "Never ask a student for passwords, OTPs, full Aadhaar numbers or full bank account numbers in chat.",
+      "Do not guarantee scholarship approval, selection or payment. Selection is on merit among eligible applicants and awards are limited.",
+      "If a required fact is unknown, do not give a definitive eligibility decision; say what is missing and what to confirm.",
+      "For anything marked conflicting, not_found or live_portal_required, tell the student to confirm on scholarships.gov.in or with the institute scholarship cell.",
+      "Direct students only to scholarships.gov.in for applying. Warn them about look-alike sites and agents.",
+      "Keep answers short, plain and practical for Indian students."
+    ],
+    "known_gaps": [
+      "No live 2026-27 NSP scheme page for Pragati Degree or Diploma was reachable; dates, upload limits and field labels are unverified against the live portal.",
+      "Official 2026-27 AICTE guideline PDF was not opened; rules are from AICTE FAQ text (Appendices dated 2021-22) and older guideline excerpts.",
+      "The myScheme page body and FAQ answers (document type and size, bonafide cases, application fee) were not readable; only headings and summary text were seen.",
+      "Accepted-bank list, document file formats and size limits (except as flagged), renewal mark or attendance thresholds and payment timeline were not found.",
+      "The other-scholarship restriction appears in AICTE FAQ text read through an institute-hosted copy but was not confirmed on the live NSP scheme page, so it is used only as an advisory prompt."
+    ],
+    "corrections_log": [
+      "Amount: removed the stated INR 30,000 tuition + INR 20,000 incidental split as fact; marked the payment structure conflicting.",
+      "Income certificate: replaced 'preceding financial year' certainty with a conflicting status because AICTE FAQ text says 'current financial year' while older guideline and a 2025-26 summary say 'preceding'.",
+      "Documents: every document now has a requirement_level; photo/signature sizes downgraded to not_verified; removed claims that were only from third-party sites (domicile, bank mandate) from mandatory status.",
+      "Bank rules: corrected to AICTE FAQ text (Aadhaar-seeded general savings account in the student's own name; joint, minor and FRILL accounts not accepted).",
+      "Other scholarship: replaced vague rule with the scope stated in AICTE FAQ text (Central Govt, State Govt or AICTE-sponsored scholarships).",
+      "Renewal and discontinuation: removed invented attendance, conduct and same-institute conditions; kept only promotion certificate via NSP and fail/drop-out rule.",
+      "Rejection reasons: replaced my earlier list with the reasons given in AICTE FAQ Q18-21.",
+      "Quota: changed from a simple 4,000/5,000 note to a conflicting status with the figures each source gives.",
+      "Dates: downgraded to secondary_source because live NSP could not confirm 2026-27.",
+      "Eligibility: marked income boundary wording (less than vs not more than INR 8 lakh) and centralised-admission/management-quota rules as conflicting or unverified; 'Indian citizen' marked secondary_source.",
+      "Helpline: both reported AICTE emails listed as conflicting; removed 'No fee' as a confirmed fact.",
+      "Sources: added source type, access date and supported claims; every fact now carries source_ids.",
+      "Checklists, FAQs, RAG chunks and docmitra_features rewritten to match the corrected data; all checklist document IDs exist in the catalogue.",
+      "Revision 2 - Amount: both schemes now carry breakdown_status 'unverified' with each component marked unverified, and explicit docmitra_may_state / docmitra_must_not_state lists.",
+      "Revision 2 - Other scholarship: removed the eligibility rule that made receiving another scholarship a decisive condition. It is now advisory only (hard_rule false, live_verification not_done); the eligibility checker no longer returns likely_not_eligible for it.",
+      "Revision 2 - Income certificate year: re-searched; still conflicting. Added a tally of 2026-27 third-party pages (mostly 'preceding') versus other pages and AICTE FAQ text ('current'). No year is stated as fact.",
+      "Revision 2 - Sources: replaced accessed_on with access_method plus fetched_on (only for pages opened in full) or seen_in_search_results_on (snippet-only); added checked_live_2026_27=false on every source; added s10 for the income-year pages.",
+      "Revision 2 - Consistency: FAQs, application steps, eligibility inputs, common mistakes and RAG chunks reworded to match the advisory other-scholarship rule and the unverified amount breakdown.",
+      "Revision 3 - Removed 'availing a scholarship from other sources' from schemes[0].rejection_reasons.application_direct_rejection and recorded it under reported_but_advisory_only; aligned FAQ faq_rejection, RAG chunk pragati_rejection, scope notes and the Diploma scheme. Regular second-year applicants now return unknown_confirm_needed instead of likely_not_eligible because no source says they are ineligible."
+    ]
+  },
+  "important_dates": {
+    "verification_status": "secondary_source",
+    "source_ids": [
+      "s7",
+      "s1"
+    ],
+    "note": "These 2026-27 dates appear consistently on several third-party pages. The live NSP page reachable during this audit showed academic year 2024-25 with the same date pattern, which does not prove 2026-27 dates. Extensions can occur in either direction; students must re-check the live NSP scheme listing.",
+    "events": [
+      {
+        "event": "NSP opens for 2026-27 applications",
+        "date": "2026-06-01",
+        "verification_status": "secondary_source",
+        "source_ids": [
+          "s7"
+        ]
+      },
+      {
+        "event": "Last date for student application (fresh and renewal)",
+        "date": "2026-10-31",
+        "verification_status": "secondary_source",
+        "source_ids": [
+          "s7"
+        ]
+      },
+      {
+        "event": "Last date for defective-application verification",
+        "date": "2026-11-15",
+        "verification_status": "secondary_source",
+        "source_ids": [
+          "s7"
+        ]
+      },
+      {
+        "event": "Last date for institute verification",
+        "date": "2026-11-15",
+        "verification_status": "secondary_source",
+        "source_ids": [
+          "s7"
+        ]
+      },
+      {
+        "event": "Last date for DNO/SNO/MNO verification",
+        "date": "2026-11-30",
+        "verification_status": "secondary_source",
+        "source_ids": [
+          "s7"
+        ]
+      }
+    ],
+    "conflicts": [
+      "One page says AICTE opened its portal on 2026-06-19 while others say NSP opened on 2026-06-01. Treat both as unverified and tell students to read the live NSP listing."
+    ],
+    "urgency_rule": "At runtime compare today's date with the application deadline. If it is on or before 2026-10-31, tell the student to apply and get institute verification started now and to confirm the date on NSP. If it is after, say the listed date has passed and ask them to check NSP for any extension or defective-application window. Never promise an extension.",
+    "ignore_unverified_messages": "Messages on social media saying the date is extended are not reliable unless shown on scholarships.gov.in."
+  },
+  "authorities_and_links": {
+    "administering_authority": {
+      "name": "All India Council for Technical Education (AICTE), Ministry of Education, Government of India",
+      "verification_status": "official_document_copy",
+      "source_ids": [
+        "s6",
+        "s4"
+      ]
+    },
+    "application_portal": {
+      "name": "National Scholarship Portal (NSP)",
+      "url": "https://scholarships.gov.in",
+      "verification_status": "official_document_copy",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "AICTE FAQ text says apply online on NSP after the application process is notified."
+    },
+    "nsp_all_scholarships_page": {
+      "url": "https://scholarships.gov.in/All-Scholarships",
+      "verification_status": "live_portal_required",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Lists 'AICTE - Pragati Scholarship Scheme for Girl Students (Technical Degree)' and '(Technical Diploma)' as separate schemes with Specifications and FAQ links. The copy reached during audit showed 2024-25."
+    },
+    "aicte_site": {
+      "url": "https://www.aicte-india.org",
+      "verification_status": "official_document_copy",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Home page has a 'Pragati and Saksham' link."
+    },
+    "myscheme_degree_page": {
+      "url": "https://www.myscheme.gov.in/schemes/psgs-deg",
+      "verification_status": "official_document_copy",
+      "source_ids": [
+        "s6"
+      ]
+    },
+    "legacy_scheme_site": {
+      "url": "https://www.aicte-pragati-saksham-gov.in",
+      "verification_status": "not_found",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "A college summary calls this the official portal, but AICTE FAQ text says to apply on NSP. Do not send students here; send them to scholarships.gov.in."
+    },
+    "helpline": {
+      "verification_status": "conflicting",
+      "source_ids": [
+        "s3",
+        "s5"
+      ],
+      "values": [
+        {
+          "type": "email",
+          "value": "pragati@aicte-india.org",
+          "note": "Given in AICTE FAQ text (with phone 011-29581118)"
+        },
+        {
+          "type": "email",
+          "value": "pragatisaksham@aicte-india.org",
+          "note": "Given in the 2025-26 summary and on a Vikaspedia page sourced to AICTE"
+        },
+        {
+          "type": "phone",
+          "value": "011-29581118",
+          "note": "AICTE FAQ text"
+        },
+        {
+          "type": "email",
+          "value": "helpdesk@nsp.gov.in",
+          "note": "NSP portal helpdesk per AICTE FAQ text"
+        }
+      ],
+      "instruction": "Show the NSP helpdesk and the institute scholarship cell first; give AICTE emails as 'reported' and ask the student to confirm on NSP."
+    },
+    "application_fee": {
+      "verification_status": "not_found",
+      "note": "Not confirmed. myScheme has an FAQ on this but its answer was not readable. Tell students never to pay agents or unofficial sites and to check NSP."
+    }
+  },
+  "schemes": [
+    {
+      "scheme_id": "pragati_degree",
+      "official_name": "AICTE Pragati Scholarship Scheme for Girl Students - Technical Degree",
+      "nsp_listing_name": "Aicte - Pragati Scholarship Scheme For Girl Students ( Technical Degree)",
+      "level": "Degree",
+      "purpose": "Encourage and support girl students to pursue technical education.",
+      "purpose_verification_status": "official_document_copy",
+      "purpose_source_ids": [
+        "s6",
+        "s3"
+      ],
+      "academic_year": "2026-27",
+      "scholarship_amount": {
+        "verification_status": "conflicting",
+        "source_ids": [
+          "s3",
+          "s4",
+          "s5",
+          "s6",
+          "s8"
+        ],
+        "agreed_across_sources": "INR 50,000 per annum for every year of study; paid by Direct Benefit Transfer (DBT) into the student's bank account.",
+        "version_a_lump_sum": "AICTE FAQ text (Appendices dated 2021-22) and a 2020-21 guideline excerpt describe INR 50,000 per annum as a lump sum towards college fee, computer purchase, stationery, books, equipment, software etc. with no additional grant for hostel or medical charges. myScheme-based summaries describe it the same way.",
+        "version_b_tuition_plus_incidentals": "An older AICTE salient-features document and its copies describe tuition fee of INR 30,000 or actual (whichever is less) plus INR 2,000 per month for 10 months as incidentals; for students with tuition fee waiver or reimbursement, INR 30,000 for books, equipment, software, laptop/desktop, vehicle or competitive-exam fees.",
+        "reconciliation": "Not reconciled. It is not confirmed which version applies in 2026-27.",
+        "docmitra_instruction": "Say: 'The scholarship is INR 50,000 per year. How it is split or paid can differ by guideline version, so please check the current NSP/AICTE notice or ask your institute.' Do not state the INR 30,000 + INR 20,000 split as current fact. Do not give a payment date.",
+        "duration": {
+          "first_year_admission": "Maximum 4 years",
+          "lateral_entry_second_year_admission": "Maximum 3 years",
+          "verification_status": "official_document_copy",
+          "source_ids": [
+            "s3",
+            "s6"
+          ]
+        },
+        "payment_mode": {
+          "value": "DBT into a general savings bank account in the student's own name that is Aadhaar-seeded. FRILL, minor and joint accounts are not accepted.",
+          "verification_status": "official_document_copy",
+          "source_ids": [
+            "s3"
+          ]
+        },
+        "breakdown_status": "unverified",
+        "breakdown_components": [
+          {
+            "component": "Tuition fee up to INR 30,000 or actual, whichever is less",
+            "status": "unverified",
+            "source_ids": [
+              "s4",
+              "s5"
+            ],
+            "note": "Older AICTE salient-features text; not confirmed for 2026-27"
+          },
+          {
+            "component": "Incidentals INR 2,000 per month for 10 months (INR 20,000 per year)",
+            "status": "unverified",
+            "source_ids": [
+              "s4",
+              "s5"
+            ],
+            "note": "Older AICTE salient-features text; not confirmed for 2026-27"
+          },
+          {
+            "component": "Lump sum INR 50,000 for fees, computer, stationery, books, equipment, software",
+            "status": "unverified",
+            "source_ids": [
+              "s3",
+              "s6",
+              "s8"
+            ],
+            "note": "Newer AICTE FAQ text and aggregator summaries; not confirmed on the live 2026-27 scheme page"
+          }
+        ],
+        "docmitra_may_state": [
+          "INR 50,000 per year is the amount described across AICTE-type and aggregator sources",
+          "Payment is by DBT to the student's bank account"
+        ],
+        "docmitra_must_not_state": [
+          "That INR 30,000 is tuition and INR 20,000 is incidentals as the current rule",
+          "That the amount is definitely a lump sum",
+          "Any payment date or instalment schedule"
+        ]
+      },
+      "eligibility": {
+        "gender": {
+          "value": "Only female students",
+          "verification_status": "official_document_copy",
+          "source_ids": [
+            "s3"
+          ]
+        },
+        "nationality": {
+          "value": "Indian citizen",
+          "verification_status": "secondary_source",
+          "source_ids": [
+            "s9"
+          ],
+          "note": "Not stated in the AICTE FAQ text read; stated on third-party pages."
+        },
+        "institution": {
+          "value": "Admitted to an AICTE-approved institution; course and institution must be AICTE-approved for the current academic year",
+          "verification_status": "official_document_copy",
+          "source_ids": [
+            "s3"
+          ]
+        },
+        "course_level": {
+          "value": "UG Degree-level programme/course",
+          "verification_status": "official_document_copy",
+          "source_ids": [
+            "s3"
+          ]
+        },
+        "eligible_course_types": {
+          "verification_status": "not_found",
+          "note": "Which specific branches or programmes count as 'technical degree' was not confirmed. Third-party lists (engineering, pharmacy, architecture, MBA, MCA, hotel management) disagree. Tell the student the course and institute must be AICTE-approved and to check the NSP course/institute selection or ask the institute."
+        },
+        "excluded_courses": {
+          "value": "Non-technical courses, courses or institutes not approved by AICTE in the current year, dual-degree courses, post-graduate courses",
+          "verification_status": "official_document_copy",
+          "source_ids": [
+            "s3"
+          ],
+          "note": "From AICTE FAQ list of reasons for direct rejection."
+        },
+        "admission_year": {
+          "value": [
+            "First year of the degree course",
+            "Second year of the degree course through lateral entry (LE)"
+          ],
+          "not_eligible_for_fresh": "A student in 3rd year of a Degree/Diploma course is not eligible (AICTE FAQ Q3). A regular second-year student is not covered by the fresh rule as worded; she can continue only through renewal if already an awardee.",
+          "verification_status": "official_document_copy",
+          "source_ids": [
+            "s3",
+            "s6"
+          ]
+        },
+        "centralised_admission_and_management_quota": {
+          "verification_status": "conflicting",
+          "source_ids": [
+            "s3",
+            "s4",
+            "s9"
+          ],
+          "note": "Older AICTE salient features and a 2025-26 college summary say admission should be through the centralised admission process of the State/Central Government, and third-party pages say management-quota students are not eligible. The AICTE FAQ eligibility list read does not state this. Do not treat as settled; ask the student to confirm with the institute."
+        },
+        "family_income_limit": {
+          "value": "INR 8 lakh per annum",
+          "boundary_wording": "AICTE FAQ text says 'less than Rs. 8 Lakh'; an older AICTE guideline says 'not more than 8 lakh'. If the certificate shows exactly INR 8,00,000, tell the student to confirm with the institute or NSP.",
+          "married_girl_rule": "For a married girl, the income of parents or in-laws, whichever is higher, is considered.",
+          "married_girl_verification_status": "official_document_copy",
+          "financial_year": {
+            "verification_status": "conflicting",
+            "source_ids": [
+              "s3",
+              "s4",
+              "s9"
+            ],
+            "details": "Older AICTE guideline: income during the 'preceding financial year'. AICTE FAQ text (Appendix II and Q19): income 'for the current financial year' and rejection if the 'current year' certificate is not submitted. A 2025-26 college summary says 'preceding financial year'.",
+            "docmitra_instruction": "Do not state which financial year applies. Ask the student to confirm the required year on the live NSP upload page or with the institute scholarship cell before getting the certificate made.",
+            "secondary_source_tally": {
+              "preceding_financial_year": [
+                "Enggprep 2026-27 page",
+                "schemesinindia 2026-27 page",
+                "dekhocampus 2026-27 page (Pragati)",
+                "HowToHelp 2026-27 page (says previous year 2025-26 but also says certificate issued on or after 1 April 2026, which is internally inconsistent)",
+                "Buddy4Study/IndiaScholarships pages"
+              ],
+              "current_financial_year": [
+                "AICTE FAQ text Appendix II and Q19 (institute-hosted copy)",
+                "scholarshipsinindia 2026-27 page (copy of AICTE text for Diploma)",
+                "sarsaeducation 2025-26 page"
+              ],
+              "result": "Still conflicting. No authoritative live source found. Do not state a year.",
+              "source_ids": [
+                "s3",
+                "s4",
+                "s10"
+              ]
+            }
+          },
+          "verification_status": "conflicting",
+          "source_ids": [
+            "s3",
+            "s4"
+          ]
+        },
+        "family_member_restriction": {
+          "value": "Maximum two girl children per family",
+          "verification_status": "official_document_copy",
+          "source_ids": [
+            "s3",
+            "s6",
+            "s4"
+          ],
+          "note": "Parent declaration states total daughters and whether the applicant is the first or second daughter applying."
+        },
+        "merit_basis": {
+          "value": "Selection is on merit of the qualifying examination among eligible applicants in AICTE-approved institutions; eligibility does not guarantee selection.",
+          "verification_status": "official_document_copy",
+          "source_ids": [
+            "s4",
+            "s5"
+          ]
+        },
+        "reservation": {
+          "value": "As per Government of India norms (AICTE FAQ). Percentages of 15% SC, 7.5% ST and 27% OBC appear on a government site and a college summary.",
+          "verification_status": "secondary_source",
+          "source_ids": [
+            "s3",
+            "s9"
+          ],
+          "note": "Do not quote percentages as confirmed for 2026-27."
+        },
+        "other_scholarship_restriction": {
+          "verification_status": "official_document_copy",
+          "source_ids": [
+            "s3"
+          ],
+          "exact_rule": "AICTE FAQ text (read in an institute-hosted copy) says the candidate should not be a recipient of any Central Govt, State Govt or AICTE-sponsored scholarship, that students already receiving such a scholarship are not eligible (Q5), and gives a first-year B.E. student who is a PMSSS beneficiary as an example (Q6). Q18 separately lists 'student is availing a scholarship from other sources' among rejection reasons. None of this was confirmed on the live 2026-27 NSP page.",
+          "scope_notes": [
+            "The confirmed scope is Central Government, State Government and AICTE-sponsored scholarships.",
+            "The wording 'other sources' in the Q18 list of rejection reasons is broader than the Q5-Q6 eligibility text; how private or non-government scholarships are treated was not confirmed.",
+            "A college-format student declaration reads: not availing any other scholarship from Central/State sources, and the student will inform non-government sources of her application status."
+          ],
+          "docmitra_instruction": "Treat as an advisory prompt, not a decisive condition. If the student says she receives a Central, State or AICTE scholarship, say: 'AICTE FAQ text says this may make you ineligible, but I could not confirm it on the live NSP page. Please confirm with your institute scholarship cell or NSP before applying.' Do not mark her not eligible. For private or non-government scholarships say the rule is not confirmed. If unknown, you may mention the point once and move on.",
+          "hard_rule": false,
+          "eligibility_effect": "advisory_only",
+          "live_verification": "not_done",
+          "status_in_docmitra": "advisory_only"
+        },
+        "regions_note": {
+          "value": "AICTE FAQ text lists the number of awards for 23 States/UTs and says all eligible students in AICTE-approved institutions in Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Sikkim, Tripura, Andaman & Nicobar, Dadra & Nagar Haveli and Daman & Diu, Jammu & Kashmir, Lakshadweep and Ladakh are eligible to apply.",
+          "verification_status": "official_document_copy",
+          "source_ids": [
+            "s3"
+          ]
+        },
+        "number_of_awards": {
+          "verification_status": "conflicting",
+          "source_ids": [
+            "s3",
+            "s4",
+            "s9"
+          ],
+          "details": "AICTE FAQ text (2025-26 era): 5,000 at Degree level and 5,000 at Diploma level for 23 States/UTs, plus eligible students in the north-eastern states and UTs listed above. Older AICTE salient features: 4,000 per annum (2,000 Degree and 2,000 Diploma). A 2025-26 college summary says 5,000 girls per year with fresh and renewal combined.",
+          "docmitra_instruction": "Say that awards are limited and the number differs by source; do not quote a figure."
+        }
+      },
+      "renewal_and_continuation": {
+        "verification_status": "official_document_copy",
+        "source_ids": [
+          "s3"
+        ],
+        "rule": "The scholarship is renewed for the next year of study on receipt of a renewal application through NSP with a Promotion Certificate duly certified by the Head of Institution (Appendix IV, issued by Director/Principal/Head of Institution with stamp and signature).",
+        "discontinuation_rule": "If a candidate fails or drops out in a subsequent year, she is not eligible for further scholarship (Q7).",
+        "renewal_deadline": {
+          "value": "Same listed date as fresh applications (2026-10-31)",
+          "verification_status": "secondary_source",
+          "source_ids": [
+            "s7"
+          ]
+        },
+        "not_found": [
+          "Minimum marks or attendance percentage for renewal",
+          "Whether a fresh income certificate or fee receipt is needed at renewal",
+          "Whether a change of institute is allowed"
+        ],
+        "docmitra_instruction": "Do not state any mark, attendance or other renewal threshold. Tell the student to follow the Renewal form on NSP and get the promotion certificate from the institute."
+      },
+      "rejection_reasons": {
+        "verification_status": "official_document_copy",
+        "source_ids": [
+          "s3"
+        ],
+        "application_direct_rejection": [
+          "Student is admitted in a non-technical course, or the course is not approved by AICTE in the current academic year",
+          "University or institute is not approved by AICTE in the current academic year",
+          "Incomplete or wrong information in the submitted application",
+          "Student admitted in a dual-degree course",
+          "Student admitted in a post-graduate course"
+        ],
+        "income_certificate_rejection": [
+          "Certificate of the current year not submitted (see financial-year conflict above)",
+          "Certificate not in the name of the applicant or a family member",
+          "Issued by someone other than a competent authority (Tehsildar, Magistrate, Revenue officer, Block Development Officer etc.)",
+          "Submitted without signature or stamp of the competent authority"
+        ],
+        "promotion_certificate_rejection": [
+          "Incomplete or blank certificate",
+          "No college stamp or Principal/Director signature"
+        ],
+        "class10_12_certificate_rejection": [
+          "Blurred or inaccessible copy",
+          "Not in the applicant's name",
+          "Irrelevant document uploaded in its place"
+        ],
+        "bonafide_and_promotion_note": "Appendix notes say a bonafide or promotion certificate with incomplete information, or without signature and stamp of the Head of Institution, leads to rejection.",
+        "additional_conditions": "Parent declaration says scholarship will be cancelled and recovered if false information or double payment is found.",
+        "reported_but_advisory_only": {
+          "items": [
+            "AICTE FAQ Q18 lists 'student is availing a scholarship from other sources' among reasons for direct rejection"
+          ],
+          "status": "Not used as a rejection rule by DocMitra",
+          "reason": "The wording is broader than the Q5-Q6 eligibility text (Central Govt, State Govt or AICTE-sponsored scholarships) and was not confirmed on the live 2026-27 NSP page. See eligibility.other_scholarship_restriction.",
+          "verification_status": "not_found",
+          "source_ids": [
+            "s3"
+          ]
+        },
+        "docmitra_usage_note": "Items listed here are information for the student, not decision rules. DocMitra must not reject or rule out a student on any advisory item."
+      }
+    },
+    {
+      "scheme_id": "pragati_diploma",
+      "official_name": "AICTE Pragati Scholarship Scheme for Girl Students - Technical Diploma",
+      "nsp_listing_name": "Aicte - Pragati Scholarship Scheme For Girl Students ( Technical Diploma)",
+      "level": "Diploma",
+      "purpose": "Encourage and support girl students to pursue technical diploma education.",
+      "purpose_verification_status": "official_document_copy",
+      "purpose_source_ids": [
+        "s6",
+        "s3"
+      ],
+      "academic_year": "2026-27",
+      "scholarship_amount": {
+        "verification_status": "conflicting",
+        "source_ids": [
+          "s3",
+          "s4",
+          "s5",
+          "s6",
+          "s8"
+        ],
+        "same_as_scheme": "pragati_degree",
+        "agreed_across_sources": "INR 50,000 per annum for every year of study, by DBT.",
+        "docmitra_instruction": "Same as the Degree scheme: state INR 50,000 per year; do not state the tuition/incidental split as fact.",
+        "duration": {
+          "first_year_admission": "Maximum 3 years",
+          "lateral_entry_second_year_admission": "Maximum 2 years",
+          "verification_status": "official_document_copy",
+          "source_ids": [
+            "s3",
+            "s6"
+          ]
+        },
+        "payment_mode": {
+          "value": "Same as Degree scheme: DBT to Aadhaar-seeded general savings account in the student's own name; FRILL, minor and joint accounts not accepted",
+          "verification_status": "official_document_copy",
+          "source_ids": [
+            "s3"
+          ]
+        },
+        "breakdown_status": "unverified",
+        "breakdown_components": [
+          {
+            "component": "Tuition fee up to INR 30,000 or actual, whichever is less",
+            "status": "unverified",
+            "source_ids": [
+              "s4",
+              "s5"
+            ],
+            "note": "Older AICTE salient-features text; not confirmed for 2026-27"
+          },
+          {
+            "component": "Incidentals INR 2,000 per month for 10 months (INR 20,000 per year)",
+            "status": "unverified",
+            "source_ids": [
+              "s4",
+              "s5"
+            ],
+            "note": "Older AICTE salient-features text; not confirmed for 2026-27"
+          },
+          {
+            "component": "Lump sum INR 50,000 for fees, computer, stationery, books, equipment, software",
+            "status": "unverified",
+            "source_ids": [
+              "s3",
+              "s6",
+              "s8"
+            ],
+            "note": "Newer AICTE FAQ text and aggregator summaries; not confirmed on the live 2026-27 scheme page"
+          }
+        ],
+        "docmitra_may_state": [
+          "INR 50,000 per year is the amount described across AICTE-type and aggregator sources",
+          "Payment is by DBT to the student's bank account"
+        ],
+        "docmitra_must_not_state": [
+          "That INR 30,000 is tuition and INR 20,000 is incidentals as the current rule",
+          "That the amount is definitely a lump sum",
+          "Any payment date or instalment schedule"
+        ]
+      },
+      "eligibility": {
+        "same_as_scheme_unless_stated": "pragati_degree",
+        "gender": {
+          "value": "Only female students",
+          "verification_status": "official_document_copy",
+          "source_ids": [
+            "s3"
+          ]
+        },
+        "nationality": {
+          "value": "Indian citizen",
+          "verification_status": "secondary_source",
+          "source_ids": [
+            "s9"
+          ]
+        },
+        "course_level": {
+          "value": "Diploma-level programme/course in an AICTE-approved institution",
+          "verification_status": "official_document_copy",
+          "source_ids": [
+            "s3"
+          ]
+        },
+        "eligible_course_types": {
+          "verification_status": "not_found",
+          "note": "Specific diploma programmes were not confirmed; rely on AICTE approval of course and institute and the NSP selection."
+        },
+        "admission_year": {
+          "value": [
+            "First year of the diploma course",
+            "Second year of the diploma course through lateral entry (LE)"
+          ],
+          "not_eligible_for_fresh": "A student in 3rd year of a Degree/Diploma course is not eligible (AICTE FAQ Q3).",
+          "verification_status": "official_document_copy",
+          "source_ids": [
+            "s3",
+            "s6"
+          ]
+        },
+        "family_income_limit": {
+          "value": "INR 8 lakh per annum",
+          "financial_year": "conflicting (see Degree scheme)",
+          "boundary_wording": "less than vs not more than INR 8 lakh; confirm if exactly INR 8,00,000",
+          "married_girl_rule": "Higher of parents' or in-laws' income considered",
+          "verification_status": "conflicting",
+          "source_ids": [
+            "s3",
+            "s4"
+          ]
+        },
+        "family_member_restriction": {
+          "value": "Maximum two girl children per family",
+          "verification_status": "official_document_copy",
+          "source_ids": [
+            "s3",
+            "s6"
+          ]
+        },
+        "merit_basis": {
+          "value": "Merit of the qualifying examination among eligible applicants",
+          "verification_status": "official_document_copy",
+          "source_ids": [
+            "s4",
+            "s5"
+          ],
+          "note": "Which exact examination is used for diploma first-year versus lateral-entry students was not confirmed."
+        },
+        "other_scholarship_restriction": {
+          "same_as_scheme": "pragati_degree",
+          "verification_status": "official_document_copy",
+          "source_ids": [
+            "s3"
+          ],
+          "hard_rule": false,
+          "eligibility_effect": "advisory_only",
+          "live_verification": "not_done"
+        },
+        "centralised_admission_and_management_quota": {
+          "verification_status": "conflicting",
+          "same_as_scheme": "pragati_degree",
+          "source_ids": [
+            "s3",
+            "s4",
+            "s9"
+          ]
+        },
+        "number_of_awards": {
+          "verification_status": "conflicting",
+          "same_as_scheme": "pragati_degree",
+          "source_ids": [
+            "s3",
+            "s4",
+            "s9"
+          ]
+        }
+      },
+      "renewal_and_continuation": {
+        "same_as_scheme": "pragati_degree",
+        "verification_status": "official_document_copy",
+        "source_ids": [
+          "s3"
+        ],
+        "rule": "Renewal through NSP with Promotion Certificate certified by the Head of Institution; failing or dropping out ends eligibility.",
+        "not_found": [
+          "Minimum marks or attendance percentage for renewal"
+        ]
+      },
+      "rejection_reasons": {
+        "same_as_scheme": "pragati_degree",
+        "verification_status": "official_document_copy",
+        "source_ids": [
+          "s3"
+        ],
+        "diploma_specific_note": "No diploma-specific rejection reasons were found in the AICTE FAQ text; do not invent any.",
+        "advisory_note": "The other-scholarship item is handled as advisory only, exactly as in pragati_degree.rejection_reasons.reported_but_advisory_only."
+      }
+    }
+  ],
+  "document_catalogue": {
+    "verification_status": "mixed",
+    "source_ids": [
+      "s3",
+      "s9"
+    ],
+    "general_rules": [
+      "The AICTE FAQ upload list (Q22) was read through an institute-hosted copy, not the live 2026-27 NSP upload page. The student must follow the live NSP page for the final list.",
+      "Photo and signature size and format limits, and limits for other documents, are NOT verified for 2026-27. DocMitra must tell the student to follow the limits shown on the live NSP upload page.",
+      "A 2025-26 college summary quotes passport photo up to 200 KB and signature up to 50 KB. This is a college-authored summary and is not treated as confirmed.",
+      "Student name, date of birth and parent names should match across documents.",
+      "Do not ask the student to paste document numbers into chat."
+    ],
+    "documents": [
+      {
+        "doc_id": "aadhaar",
+        "name": "Aadhaar card",
+        "requirement_level": "officially_mandatory",
+        "applies_to": [
+          "pragati_degree",
+          "pragati_diploma"
+        ],
+        "evidence": "AICTE FAQ Q13: Aadhaar card and an Aadhaar-seeded bank account in the candidate's name are mandatory for submitting the online application.",
+        "verification_status": "official_document_copy",
+        "source_ids": [
+          "s3"
+        ],
+        "tips": [
+          "Check Aadhaar seeding status of the bank account before applying (NSP has a 'Check Aadhaar Seeding Status' link)."
+        ],
+        "privacy_note": "Never ask for the Aadhaar number in chat."
+      },
+      {
+        "doc_id": "class10",
+        "name": "Class 10 (SSC) certificate and marksheet",
+        "requirement_level": "officially_mandatory",
+        "applies_to": [
+          "pragati_degree",
+          "pragati_diploma"
+        ],
+        "evidence": "AICTE FAQ Q22 upload list: copy of SSC/10th certificate and marksheet. Q21: blurred, inaccessible, wrong-name or irrelevant uploads are rejected.",
+        "verification_status": "official_document_copy",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      {
+        "doc_id": "class12",
+        "name": "Class 12 (HSC) certificate and marksheet",
+        "requirement_level": "conditionally_required",
+        "applies_to": [
+          "pragati_degree"
+        ],
+        "condition": "Listed by AICTE FAQ for Degree level. Whether it is needed for lateral-entry degree students (who may come through diploma) was not confirmed.",
+        "verification_status": "official_document_copy",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      {
+        "doc_id": "iti_certificate",
+        "name": "ITI certificate and marksheet",
+        "requirement_level": "conditionally_required",
+        "applies_to": [
+          "pragati_diploma"
+        ],
+        "condition": "Lateral entry to Diploma level (AICTE FAQ Q22).",
+        "verification_status": "official_document_copy",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      {
+        "doc_id": "diploma_certificate",
+        "name": "Diploma certificate and marksheet",
+        "requirement_level": "conditionally_required",
+        "applies_to": [
+          "pragati_degree"
+        ],
+        "condition": "Lateral entry to Degree level (AICTE FAQ Q22).",
+        "verification_status": "official_document_copy",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      {
+        "doc_id": "admission_proof",
+        "name": "Admission letter (centralised admission authority) or equivalent admission proof",
+        "requirement_level": "commonly_requested",
+        "applies_to": [
+          "pragati_degree",
+          "pragati_diploma"
+        ],
+        "evidence": "Listed in a 2025-26 college summary; not in the AICTE FAQ Q22 upload list read.",
+        "verification_status": "secondary_source",
+        "source_ids": [
+          "s3"
+        ],
+        "note": "Ask the institute or check the NSP upload page whether it is required.",
+        "recheck_note": "A 2026-27 third-party page lists 'bonafide or admission certificate from your AICTE-approved institute', which suggests institutes may accept either; not confirmed. Ask the institute which one NSP needs."
+      },
+      {
+        "doc_id": "bonafide_study_certificate",
+        "name": "Study / Bonafide certificate from Director, Principal or Head of Institution (Appendix I format)",
+        "requirement_level": "conditionally_required",
+        "applies_to": [
+          "pragati_degree",
+          "pragati_diploma"
+        ],
+        "evidence": "AICTE FAQ Q22 lists it; its Appendix I states it must carry the student's NSP Application ID and be signed and stamped. myScheme has an FAQ titled 'In what cases a Bonafide Certificate from the institute is needed?' (answer not readable), which suggests it is not needed in every case.",
+        "verification_status": "official_document_copy",
+        "source_ids": [
+          "s3",
+          "s6"
+        ],
+        "note": "Because it includes the NSP Application ID, it is usually obtained after the student registers or submits. Confirm the timing with the institute.",
+        "recheck_note": "A 2026-27 third-party page lists 'bonafide or admission certificate from your AICTE-approved institute', which suggests institutes may accept either; not confirmed. Ask the institute which one NSP needs."
+      },
+      {
+        "doc_id": "tuition_fee_receipt",
+        "name": "Receipt of tuition fee paid for the current academic year",
+        "requirement_level": "commonly_requested",
+        "applies_to": [
+          "pragati_degree",
+          "pragati_diploma"
+        ],
+        "evidence": "Listed in a 2025-26 college summary; not in the AICTE FAQ Q22 list read. Its relevance depends on the unresolved amount-structure conflict.",
+        "verification_status": "secondary_source",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      {
+        "doc_id": "income_certificate",
+        "name": "Annual family income certificate (Appendix II format)",
+        "requirement_level": "officially_mandatory",
+        "applies_to": [
+          "pragati_degree",
+          "pragati_diploma"
+        ],
+        "evidence": "AICTE FAQ Q22 and Appendix II: certificate of annual family income from all sources, signed and sealed by Tehsildar / District Magistrate / Deputy Commissioner. Q19 lists Tehsildar, Magistrate, Revenue officer or Block Development Officer as competent authorities.",
+        "financial_year": "conflicting (current vs preceding financial year); see schemes eligibility.family_income_limit.financial_year",
+        "verification_status": "conflicting",
+        "source_ids": [
+          "s3",
+          "s4"
+        ],
+        "tips": [
+          "Must be in the name of the applicant or a family member",
+          "Must carry signature and stamp",
+          "Confirm the financial year required before applying for the certificate"
+        ],
+        "rechecked_on": "2026-10-25",
+        "recheck_result": "Requirement itself is consistent across sources (competent authority, Tehsildar or above). The financial year remains conflicting; see schemes[0].eligibility.family_income_limit.financial_year.secondary_source_tally."
+      },
+      {
+        "doc_id": "bank_proof",
+        "name": "Bank account proof (Aadhaar-seeded savings account in the student's name)",
+        "requirement_level": "officially_mandatory",
+        "applies_to": [
+          "pragati_degree",
+          "pragati_diploma"
+        ],
+        "evidence": "AICTE FAQ Q12-Q13: DBT only; general savings account in the student's name; FRILL, minor and joint accounts are not accepted; Aadhaar-seeded account mandatory.",
+        "document_format": {
+          "verification_status": "not_found",
+          "note": "A 2025-26 college summary asks for a passbook showing name, account number, IFSC and photo with bank manager's stamp. The exact upload form is not confirmed; follow the live NSP page."
+        },
+        "accepted_bank_list": {
+          "verification_status": "not_found",
+          "note": "No list was found. Do not name accepted banks; tell the student to use the bank list shown on NSP."
+        },
+        "verification_status": "official_document_copy",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      {
+        "doc_id": "parent_declaration",
+        "name": "Parent's declaration (Appendix III format)",
+        "requirement_level": "officially_mandatory",
+        "applies_to": [
+          "pragati_degree",
+          "pragati_diploma"
+        ],
+        "evidence": "AICTE FAQ Q22 and guideline text: declaration by parents that information is correct and the scholarship will be refunded if false information is found; it states total number of daughters and whether the applicant is the first or second daughter.",
+        "verification_status": "official_document_copy",
+        "source_ids": [
+          "s3",
+          "s4"
+        ]
+      },
+      {
+        "doc_id": "passport_photo",
+        "name": "Passport-size photograph",
+        "requirement_level": "commonly_requested",
+        "applies_to": [
+          "pragati_degree",
+          "pragati_diploma"
+        ],
+        "evidence": "Appears in the 2025-26 college summary and third-party lists; not in the AICTE FAQ Q22 list read.",
+        "file_limits": {
+          "verification_status": "not_found",
+          "unverified_claim": "Up to 200 KB (college summary)",
+          "instruction": "Follow the size and format shown on the live NSP upload page."
+        },
+        "verification_status": "secondary_source",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      {
+        "doc_id": "signature",
+        "name": "Candidate's signature image",
+        "requirement_level": "commonly_requested",
+        "applies_to": [
+          "pragati_degree",
+          "pragati_diploma"
+        ],
+        "evidence": "Same as photograph.",
+        "file_limits": {
+          "verification_status": "not_found",
+          "unverified_claim": "Up to 50 KB (college summary)",
+          "instruction": "Follow the size and format shown on the live NSP upload page."
+        },
+        "verification_status": "secondary_source",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      {
+        "doc_id": "caste_certificate",
+        "name": "Category (caste) certificate",
+        "requirement_level": "conditionally_required",
+        "applies_to": [
+          "pragati_degree",
+          "pragati_diploma"
+        ],
+        "condition": "Only if the student claims a category (AICTE FAQ Q22: 'Category, if applicable'). A college summary mentions an attested copy for SC/ST/OBC.",
+        "verification_status": "official_document_copy",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      {
+        "doc_id": "promotion_certificate",
+        "name": "Promotion certificate (Appendix IV format)",
+        "requirement_level": "conditionally_required",
+        "applies_to": [
+          "pragati_degree",
+          "pragati_diploma"
+        ],
+        "condition": "Renewal applicants only (AICTE FAQ Q8, Q20, Q22).",
+        "verification_status": "official_document_copy",
+        "source_ids": [
+          "s3"
+        ],
+        "tips": [
+          "Must be complete and carry the college stamp and Principal/Director signature"
+        ]
+      },
+      {
+        "doc_id": "institute_certificate_prescribed_format",
+        "name": "Certificate issued by Director/Principal/HOD in the prescribed format",
+        "requirement_level": "not_verified",
+        "applies_to": [
+          "pragati_degree",
+          "pragati_diploma"
+        ],
+        "evidence": "Listed as a separate item in a 2025-26 college summary. It may be the same as the bonafide certificate; this was not confirmed.",
+        "verification_status": "not_found",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      {
+        "doc_id": "domicile_certificate",
+        "name": "Domicile certificate",
+        "requirement_level": "not_verified",
+        "applies_to": [
+          "pragati_degree",
+          "pragati_diploma"
+        ],
+        "evidence": "Appears only in third-party lists. AICTE Appendix I only asks the institute to record the student's domicile state.",
+        "verification_status": "not_found",
+        "source_ids": [
+          "s9"
+        ],
+        "instruction": "Do not tell students it is required; ask them to check NSP."
+      },
+      {
+        "doc_id": "bank_mandate",
+        "name": "Bank mandate form",
+        "requirement_level": "not_verified",
+        "applies_to": [
+          "pragati_degree",
+          "pragati_diploma"
+        ],
+        "evidence": "Appears only in a third-party list; not in AICTE FAQ text read.",
+        "verification_status": "not_found",
+        "source_ids": [
+          "s9"
+        ],
+        "instruction": "Do not tell students it is required."
+      }
+    ],
+    "checklists_by_student_type": {
+      "_note": "Checklists are guides, not final. 'core' items are listed in AICTE FAQ text; 'conditional' apply only as described in the catalogue; 'confirm_with_institute_or_nsp' are commonly requested or unverified.",
+      "degree_first_year": {
+        "core": [
+          "aadhaar",
+          "class10",
+          "class12",
+          "income_certificate",
+          "bank_proof",
+          "parent_declaration"
+        ],
+        "conditional": [
+          "bonafide_study_certificate",
+          "caste_certificate"
+        ],
+        "confirm_with_institute_or_nsp": [
+          "admission_proof",
+          "tuition_fee_receipt",
+          "passport_photo",
+          "signature",
+          "institute_certificate_prescribed_format",
+          "domicile_certificate",
+          "bank_mandate"
+        ]
+      },
+      "degree_lateral_entry": {
+        "core": [
+          "aadhaar",
+          "class10",
+          "diploma_certificate",
+          "income_certificate",
+          "bank_proof",
+          "parent_declaration"
+        ],
+        "conditional": [
+          "class12",
+          "bonafide_study_certificate",
+          "caste_certificate"
+        ],
+        "confirm_with_institute_or_nsp": [
+          "admission_proof",
+          "tuition_fee_receipt",
+          "passport_photo",
+          "signature",
+          "institute_certificate_prescribed_format",
+          "domicile_certificate",
+          "bank_mandate"
+        ]
+      },
+      "diploma_first_year": {
+        "core": [
+          "aadhaar",
+          "class10",
+          "income_certificate",
+          "bank_proof",
+          "parent_declaration"
+        ],
+        "conditional": [
+          "bonafide_study_certificate",
+          "caste_certificate"
+        ],
+        "confirm_with_institute_or_nsp": [
+          "admission_proof",
+          "tuition_fee_receipt",
+          "passport_photo",
+          "signature",
+          "institute_certificate_prescribed_format",
+          "domicile_certificate",
+          "bank_mandate"
+        ]
+      },
+      "diploma_lateral_entry": {
+        "core": [
+          "aadhaar",
+          "class10",
+          "income_certificate",
+          "bank_proof",
+          "parent_declaration"
+        ],
+        "conditional": [
+          "iti_certificate",
+          "bonafide_study_certificate",
+          "caste_certificate"
+        ],
+        "confirm_with_institute_or_nsp": [
+          "admission_proof",
+          "tuition_fee_receipt",
+          "passport_photo",
+          "signature",
+          "institute_certificate_prescribed_format",
+          "domicile_certificate",
+          "bank_mandate"
+        ],
+        "note": "ITI certificate is listed for lateral entry to Diploma; which certificate applies to other lateral-entry routes was not confirmed."
+      },
+      "renewal": {
+        "core": [
+          "promotion_certificate"
+        ],
+        "conditional": [],
+        "confirm_with_institute_or_nsp": [
+          "aadhaar",
+          "bank_proof",
+          "income_certificate",
+          "bonafide_study_certificate",
+          "tuition_fee_receipt",
+          "passport_photo",
+          "signature",
+          "parent_declaration"
+        ],
+        "note": "Only the promotion certificate is confirmed for renewal. Whether other documents must be re-uploaded was not found."
+      }
+    }
+  },
+  "application_process": {
+    "verification_status": "mixed",
+    "source_ids": [
+      "s3",
+      "s9"
+    ],
+    "confirmed_by_aicte_faq": "Apply online on NSP after the application process is notified (Q2). After submission, check details and ask the institute to verify and forward the application within the time shown on NSP (Q17).",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Check basic eligibility",
+        "detail": "Girl student; AICTE-approved course and institute; first year or lateral-entry second year; family income within the limit; not more than two daughters from the family. Also check with your institute whether any Central, State or AICTE scholarship you already receive affects eligibility."
+      },
+      {
+        "step": 2,
+        "title": "Confirm requirements on live NSP",
+        "detail": "Open the Pragati Degree or Diploma scheme listing and its Specifications/FAQ on scholarships.gov.in and note dates, upload sizes and the required financial year for the income certificate."
+      },
+      {
+        "step": 3,
+        "title": "Prepare documents",
+        "detail": "Use the checklist for your student type and get institute-issued certificates in the prescribed format."
+      },
+      {
+        "step": 4,
+        "title": "Register and apply on NSP",
+        "detail": "Complete One Time Registration (new students) or log in (renewal), choose the correct scheme (Degree or Diploma) and Fresh or Renewal, fill details exactly as on documents, upload documents and submit."
+      },
+      {
+        "step": 5,
+        "title": "Ask the institute to verify",
+        "detail": "The institute must verify and forward the application before its deadline. Follow your institute's own instructions for printouts or originals."
+      },
+      {
+        "step": 6,
+        "title": "Track and correct",
+        "detail": "Track status on NSP. If marked defective, correct and resubmit within the defective-application window shown on NSP."
+      }
+    ],
+    "step_details_note": "The detailed NSP screen flow is from third-party and college summaries and was not checked on the live portal."
+  },
+  "verification_workflow": {
+    "verification_status": "mixed",
+    "source_ids": [
+      "s1",
+      "s3"
+    ],
+    "stages": [
+      {
+        "stage": 1,
+        "name": "Student application",
+        "actor": "Student"
+      },
+      {
+        "stage": 2,
+        "name": "Defective-application resubmission and verification",
+        "actor": "Student, then Institute"
+      },
+      {
+        "stage": 3,
+        "name": "Institute verification",
+        "actor": "Institute (login on NSP)"
+      },
+      {
+        "stage": 4,
+        "name": "DNO/SNO/MNO verification",
+        "actor": "District, State and Ministry nodal officers"
+      }
+    ],
+    "stage_deadlines": "See important_dates (secondary_source; confirm on live NSP).",
+    "after_verification": {
+      "verification_status": "not_found",
+      "note": "Selection list timing and payment timing were not found. Do not promise either."
+    },
+    "critical_warning": "Student must ask the institute to verify and forward the application within the NSP time limit; an application not verified in time may not proceed."
+  },
+  "faqs": [
+    {
+      "id": "faq_deadline",
+      "question": "What is the last date for Pragati Scholarship 2026-27?",
+      "answer": "Third-party pages list 31 October 2026 for students (fresh and renewal), 15 November 2026 for institute and defective-application verification, and 30 November 2026 for DNO/SNO/MNO verification. I could not confirm these on the live NSP page, so please check the Pragati scheme listing on scholarships.gov.in. Dates can be extended.",
+      "verification_status": "secondary_source",
+      "source_ids": [
+        "s7"
+      ]
+    },
+    {
+      "id": "faq_amount",
+      "question": "How much is the scholarship?",
+      "answer": "INR 50,000 per year, paid by DBT. How it is divided (for example tuition plus monthly incidentals, or a lump sum for fees, books and equipment) is unverified for 2026-27, so please check the current NSP or AICTE notice or ask your institute.",
+      "verification_status": "conflicting",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s6"
+      ]
+    },
+    {
+      "id": "faq_income",
+      "question": "What is the family income limit?",
+      "answer": "INR 8 lakh per year from all sources. AICTE text says 'less than' INR 8 lakh in one place and 'not more than' in another, so if your certificate shows exactly INR 8 lakh, confirm with your institute. For a married girl, the higher income of parents or in-laws is considered.",
+      "verification_status": "conflicting",
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "id": "faq_income_year",
+      "question": "Which financial year should my income certificate be for?",
+      "answer": "This is not settled. AICTE FAQ text says the current financial year, while an older guideline and most 2026-27 third-party pages say the preceding financial year. None is a live official source, so please confirm the required year on the NSP upload page or with your institute before getting the certificate.",
+      "verification_status": "conflicting",
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "id": "faq_two_girls",
+      "question": "Can two sisters apply?",
+      "answer": "A maximum of two girl children per family are eligible. The parent declaration records how many daughters there are and whether you are the first or second daughter applying. Each must separately meet all conditions and be selected on merit.",
+      "verification_status": "official_document_copy",
+      "source_ids": [
+        "s3",
+        "s6"
+      ]
+    },
+    {
+      "id": "faq_lateral",
+      "question": "Is lateral entry covered?",
+      "answer": "Yes. Girls admitted to the second year of a Degree or Diploma course through lateral entry in an AICTE-approved institution are covered. The maximum duration is 3 years for Degree and 2 years for Diploma.",
+      "verification_status": "official_document_copy",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "id": "faq_second_third_year",
+      "question": "I am in 3rd year. Can I apply?",
+      "answer": "AICTE FAQ text says a student in the 3rd year of a Degree or Diploma course is not eligible. Existing awardees continue through renewal.",
+      "verification_status": "official_document_copy",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "id": "faq_other_scholarship",
+      "question": "I already get another scholarship. Can I still apply?",
+      "answer": "AICTE FAQ text says students who receive a Central Government, State Government or AICTE-sponsored scholarship may not be eligible. I could not confirm this on the live NSP page, so please check with your institute scholarship cell or NSP before applying. For private scholarships the rule is not confirmed.",
+      "verification_status": "not_found",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "id": "faq_bank",
+      "question": "Which bank account should I use?",
+      "answer": "A general savings account in your own name that is seeded with Aadhaar. Joint, minor and FRILL accounts are not accepted. I could not find an official list of accepted banks, so use what NSP shows.",
+      "verification_status": "official_document_copy",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "id": "faq_renewal",
+      "question": "How do I renew?",
+      "answer": "Apply as a Renewal applicant on NSP with a Promotion Certificate certified by the Head of your institution. If you fail or drop out, you are not eligible for further scholarship. I could not find any minimum marks or attendance rule, so do not assume one.",
+      "verification_status": "official_document_copy",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "id": "faq_rejection",
+      "question": "Why can an application be rejected?",
+      "answer": "AICTE's FAQ text lists these reasons for rejection: a non-technical course or a course or institute not approved by AICTE, a dual-degree or post-graduate course, and incomplete or wrong information. Income, promotion and Class 10/12 certificates are rejected if unclear, unsigned, unstamped, in the wrong name or from the wrong authority. The same list also mentions availing a scholarship from other sources; I could not confirm how that applies, so please check with your institute.",
+      "verification_status": "official_document_copy",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "id": "faq_photo_signature",
+      "question": "What size should my photo and signature be?",
+      "answer": "I could not confirm the 2026-27 limits. A college summary mentions about 200 KB for the photo and 50 KB for the signature, but please follow the size and format shown on the live NSP upload page.",
+      "verification_status": "not_found",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "id": "faq_helpdesk",
+      "question": "Where can I get help?",
+      "answer": "Start with your institute's scholarship cell and the NSP helpdesk. AICTE text lists pragati@aicte-india.org with phone 011-29581118, and other pages list pragatisaksham@aicte-india.org. Please confirm which is current on NSP.",
+      "verification_status": "conflicting",
+      "source_ids": [
+        "s3",
+        "s5"
+      ]
+    },
+    {
+      "id": "faq_selection",
+      "question": "If I meet the conditions, will I definitely get the scholarship?",
+      "answer": "No. Awards are limited and selection is on merit of the qualifying examination among eligible applicants. DocMitra cannot guarantee selection or payment.",
+      "verification_status": "official_document_copy",
+      "source_ids": [
+        "s4",
+        "s5"
+      ]
+    }
+  ],
+  "docmitra_features": {
+    "eligibility_check": {
+      "output_states": [
+        "possibly_eligible",
+        "likely_not_eligible",
+        "unknown_confirm_needed"
+      ],
+      "never_output": "definitely eligible, guaranteed, or approved",
+      "inputs": [
+        {
+          "field": "gender",
+          "note": "Only female students",
+          "description": "Applicant gender as provided by the student."
+        },
+        {
+          "field": "course_level",
+          "values": [
+            "degree",
+            "diploma"
+          ],
+          "description": "Whether the student is applying under Technical Degree or Technical Diploma."
+        },
+        {
+          "field": "admission_type",
+          "values": [
+            "first_year",
+            "lateral_entry_second_year",
+            "renewal_existing_awardee",
+            "regular_second_year",
+            "third_year_or_later"
+          ],
+          "description": "Fresh admission route or existing-awardee renewal route."
+        },
+        {
+          "field": "institute_and_course_aicte_approved_this_year",
+          "type": "tri_state",
+          "description": "Whether current-year AICTE approval is confirmed."
+        },
+        {
+          "field": "course_is_technical_degree_or_diploma_not_dual_degree_or_pg",
+          "type": "tri_state",
+          "description": "Whether the course matches the scheme type and is not a dual-degree or postgraduate course."
+        },
+        {
+          "field": "annual_family_income_inr",
+          "type": "number",
+          "description": "Annual family income in INR; exact boundary wording is unresolved."
+        },
+        {
+          "field": "income_financial_year_on_certificate",
+          "description": "Financial year stated on the income certificate; required year is unresolved."
+        },
+        {
+          "field": "girl_children_in_family_already_availing_or_applying",
+          "type": "integer",
+          "description": "Count of girl children in the family already availing or applying for this scholarship."
+        },
+        {
+          "field": "bank_account_own_name_aadhaar_seeded_general_savings",
+          "type": "tri_state",
+          "description": "Whether the account is a general savings account in the applicant name and Aadhaar-seeded."
+        },
+        {
+          "field": "admitted_through_centralised_counselling_or_management_quota",
+          "type": "tri_state",
+          "description": "Admission route; source evidence conflicts."
+        },
+        {
+          "field": "other_scholarship_status",
+          "type": "tri_state",
+          "used_for": "advisory_prompt_only",
+          "affects_eligibility_output": false,
+          "description": "Whether the student receives another scholarship; use as an advisory prompt only."
+        }
+      ],
+      "advisory_flags": [
+        "other_scholarship_status",
+        "admitted_through_centralised_counselling_or_management_quota",
+        "income_financial_year_on_certificate"
+      ],
+      "rejection_reasons_usage": "AICTE-reported rejection reasons are shown to students as information. The checker must not output likely_not_eligible or reject on any advisory item (other scholarship, centralised admission or management quota, income certificate year)."
+    },
+    "document_checker": {
+      "inputs": [
+        "student_type",
+        "documents_the_student_says_she_has"
+      ],
+      "behaviour": "Compare with checklists_by_student_type. Report core items missing first, then conditional, then 'confirm with institute or NSP'. Do not call commonly requested items mandatory.",
+      "file_size_check": "Do not enforce any KB limit; tell the student to check the live NSP upload page."
+    },
+    "common_user_mistakes": [
+      "Waiting until the last day and not getting institute verification started",
+      "Getting an income certificate for the wrong financial year without checking the requirement",
+      "Choosing the wrong scheme (Degree or Diploma) or the wrong Fresh/Renewal option",
+      "Using a joint, minor or non-Aadhaar-seeded bank account",
+      "Uploading blurred, unsigned or unstamped certificates, or an Appendix I/IV certificate with missing details",
+      "Applying without checking with the institute whether an existing Central, State or AICTE scholarship affects eligibility"
+    ]
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "NSP - All Scholarships",
+      "url": "https://scholarships.gov.in/All-Scholarships",
+      "source_type": "official_portal (fetched page was a cached academic year 2024-25 view)",
+      "supports": [
+        "Pragati Technical Degree and Technical Diploma are separate NSP schemes",
+        "NSP scheme listing shows four stages: scheme open, defective-application verification, institute verification, DNO/SNO/MNO verification"
+      ],
+      "does_not_support": [
+        "Any 2026-27 date"
+      ],
+      "access_method": "fetched_full_page",
+      "fetched_on": "2026-10-25",
+      "checked_live_2026_27": false
+    },
+    {
+      "id": "s2",
+      "title": "AICTE home page",
+      "url": "https://www.aicte-india.org/",
+      "source_type": "official_portal (cached 2024-25 content)",
+      "supports": [
+        "AICTE links to National e-Scholarship and to a 'Pragati and Saksham' page"
+      ],
+      "does_not_support": [
+        "Any rule or date for 2026-27"
+      ],
+      "access_method": "fetched_full_page",
+      "fetched_on": "2026-10-25",
+      "checked_live_2026_27": false
+    },
+    {
+      "id": "s3",
+      "title": "Instruction Regarding AICTE Pragati Scholarship Scheme 2025-26 for Girl Child (institute-hosted PDF containing AICTE FAQ Q1-Q22 and Appendices I-IV dated 2021-22, plus the college's own summary)",
+      "url": "http://ssgec.ac.in/admin/scholarship/68ec8d31edf086.90840272.pdf",
+      "source_type": "institute_hosted_copy (AICTE-authored FAQ text mixed with college-authored summary)",
+      "supports": [
+        "Eligibility list",
+        "Amount as lump sum",
+        "Duration",
+        "Other scholarship restriction (Q5-Q6, Q18)",
+        "Renewal via promotion certificate (Q8)",
+        "Fail/drop-out rule (Q7)",
+        "DBT and bank account rules (Q12-Q13)",
+        "Rejection reasons (Q18-Q21)",
+        "Upload document list (Q22)",
+        "Appendix formats",
+        "Number of awards (Q10)",
+        "Helpline and NSP helpdesk contacts"
+      ],
+      "caution": "The college-authored summary part (photo/signature sizes, admission letter, tuition receipt, centralised admission, reservation percentages, aicte-pragati-saksham-gov.in) is not AICTE text and is treated as secondary_source.",
+      "access_method": "fetched_full_page",
+      "fetched_on": "2026-10-25",
+      "checked_live_2026_27": false
+    },
+    {
+      "id": "s4",
+      "title": "AICTE Pragati Scholarship scheme guidelines (aicte.gov.in PDF 'pragatisaksham.pdf' and 'Pragati Scheme Guidelines.pdf')",
+      "url": "https://aicte.gov.in/sites/default/files/pragatisaksham.pdf",
+      "source_type": "official_domain_search_snippet (older cycle, circa 2019-2020; full PDF not opened)",
+      "supports": [
+        "Tuition INR 30,000 or actual plus INR 2,000 per month for 10 months version",
+        "Income 'during the preceding financial year'",
+        "Married girl: higher of parents/in-laws income",
+        "4,000 awards (2,000 Degree and 2,000 Diploma)",
+        "Centralised admission",
+        "Merit basis",
+        "Parent declaration and refund clause"
+      ],
+      "access_method": "search_result_snippet_only",
+      "seen_in_search_results_on": "2026-10-25",
+      "checked_live_2026_27": false
+    },
+    {
+      "id": "s5",
+      "title": "Pragati Scholarship Scheme guidelines copy (Pimpri Chinchwad polytechnic-hosted copy) and Vikaspedia page sourced to AICTE",
+      "url": "https://api.piet.co.in/uploads/media/1760601162456-AICTE-Pragati-Saksham-Schemes.pdf",
+      "source_type": "institute_hosted_copy / government_aggregator (search snippets)",
+      "supports": [
+        "Tuition plus incidentals version",
+        "Merit selection",
+        "Married girl income rule",
+        "pragatisaksham@aicte-india.org contact"
+      ],
+      "other_url": "https://vikaspedia.in/education/policies-and-schemes/scholarships/u-g-scholarships/pragati-scholarship-for-girls",
+      "access_method": "search_result_snippet_only",
+      "seen_in_search_results_on": "2026-10-25",
+      "checked_live_2026_27": false
+    },
+    {
+      "id": "s6",
+      "title": "myScheme - Pragati Scholarship Scheme For Girl Students (Technical Degree) / (Technical Diploma)",
+      "url": "https://www.myscheme.gov.in/schemes/psgs-deg",
+      "source_type": "government_aggregator (search snippets; page body and FAQ answers not readable)",
+      "supports": [
+        "Scheme is by AICTE, Ministry of Education",
+        "Girls admitted in 1st year or 2nd year (lateral entry) of an AICTE-approved institution",
+        "Maximum two girl children per family",
+        "Duration 4 and 3 years (Degree), 3 and 2 years (Diploma)",
+        "INR 50,000 per annum described for college fee, computer, stationery, books, equipment and software (via an aggregator summary of the Diploma page)"
+      ],
+      "other_url": "https://youthpower.in/scheme/psgs-dip",
+      "access_method": "search_result_snippet_only",
+      "seen_in_search_results_on": "2026-10-25",
+      "checked_live_2026_27": false
+    },
+    {
+      "id": "s7",
+      "title": "2026-27 explainer pages (Buddy4Study, Shiksha, Netasampark, Entri and others)",
+      "url": "https://www.shiksha.com/college/articles/aicte-pragati-scholarship-2026-27-eligibility-amount-documents-and-how-to-apply-blogId-243317",
+      "source_type": "third_party",
+      "supports": [
+        "2026-27 dates: 1 Jun, 31 Oct, 15 Nov, 15 Nov, 30 Nov 2026"
+      ],
+      "other_urls": [
+        "https://www.buddy4study.com/article/pragati-scholarship",
+        "https://blogs.netasampark.com/post/aicte-pragati-saksham-scholarship-2026-27-apply-nsp-31-october"
+      ],
+      "access_method": "search_result_snippet_only",
+      "seen_in_search_results_on": "2026-10-25",
+      "checked_live_2026_27": false
+    },
+    {
+      "id": "s8",
+      "title": "AICTE Pragati Scheme Guidelines 2020-21 (Degree and Diploma) copy",
+      "url": "https://webscte.co.in/assets/pdf_2020/AICTE%20Pragati%20Scheme%20Guidelines.pdf",
+      "source_type": "institute_hosted_copy (search snippet only)",
+      "supports": [
+        "INR 50,000 per annum, durations, lateral-entry durations; snippet text indicates a lump sum",
+        "Applications once a year on the National e-Scholarship Portal"
+      ],
+      "access_method": "search_result_snippet_only",
+      "seen_in_search_results_on": "2026-10-25",
+      "checked_live_2026_27": false
+    },
+    {
+      "id": "s9",
+      "title": "Third-party scholarship pages (IndiaScholarships, Internshala, Thapar notice and similar)",
+      "url": "https://www.indiascholarships.in/scholarships/aicte-pragati-scholarship-for-girl-students",
+      "source_type": "third_party",
+      "supports": [
+        "Indian citizen condition",
+        "Management-quota exclusion claim",
+        "Reservation percentages",
+        "Domicile certificate and bank mandate appearing in lists"
+      ],
+      "caution": "Not treated as equivalent to official guidelines.",
+      "access_method": "search_result_snippet_only",
+      "seen_in_search_results_on": "2026-10-25",
+      "checked_live_2026_27": false
+    },
+    {
+      "id": "s10",
+      "title": "2026-27 explainer pages on income certificate year (Enggprep, HowToHelp, dekhocampus, schemesinindia, scholarshipsinindia, sarsaeducation)",
+      "url": "https://enggprep.in/aicte-scholarship-2026-27/",
+      "source_type": "third_party",
+      "access_method": "search_result_snippet_only",
+      "seen_in_search_results_on": "2026-10-25",
+      "checked_live_2026_27": false,
+      "supports": [
+        "Mixed statements on preceding versus current financial year for the income certificate"
+      ],
+      "other_urls": [
+        "https://howtohelp.in/articles/apply-aicte-pragati-saksham-swanath-scholarships",
+        "https://dekhocampus.com/news/aicte-pragati-and-saksham-scholarship-2026-27-eligibility-criteria-income-caps-and-portal-applicatio",
+        "https://schemesinindia.in/blog/aicte-pragati-saksham-scholarship-2026-27-apply",
+        "https://www.scholarshipsinindia.com/pragati-scholarship-scheme.html",
+        "https://sarsaeducation.com/aicte-pragati-scholarship/"
+      ],
+      "caution": "Not equivalent to official guidelines."
+    }
+  ],
+  "rag_chunks": [
+    {
+      "chunk_id": "pragati_overview",
+      "text": "The AICTE Pragati Scholarship is for girl students in AICTE-approved technical Degree and Diploma courses, admitted in the first year or the second year through lateral entry. It gives INR 50,000 per year by DBT (breakdown unverified) for up to 4 years (Degree) or 3 years (Diploma); lateral entry is up to 3 and 2 years. Family income limit is INR 8 lakh and up to two girls per family can benefit. Apply on scholarships.gov.in. Selection is on merit among eligible applicants, so approval is not guaranteed.",
+      "tags": [
+        "overview",
+        "amount",
+        "eligibility"
+      ],
+      "verification_status": "mixed",
+      "source_ids": [
+        "s3",
+        "s6"
+      ],
+      "claim_verification": [
+        {
+          "claim": "Scholarship purpose and eligible technical Degree/Diploma categories",
+          "verification_status": "official_document_copy",
+          "source_ids": [
+            "s3"
+          ],
+          "note": "Based on AICTE-authored FAQ text in an institute-hosted copy; not live-verified for 2026-27."
+        },
+        {
+          "claim": "Annual amount is INR 50,000 and its payment breakdown",
+          "verification_status": "conflicting",
+          "source_ids": [
+            "s3",
+            "s4",
+            "s6"
+          ],
+          "note": "The amount is described across sources, but the breakdown is not reconciled for 2026-27."
+        },
+        {
+          "claim": "Duration by course level and admission route",
+          "verification_status": "official_document_copy",
+          "source_ids": [
+            "s3",
+            "s6"
+          ],
+          "note": "Older/copy or aggregator evidence; not live-verified for 2026-27."
+        },
+        {
+          "claim": "Income threshold and maximum two girl children per family",
+          "verification_status": "conflicting",
+          "source_ids": [
+            "s3",
+            "s4",
+            "s6"
+          ],
+          "note": "The threshold boundary wording differs; do not resolve exactly INR 8 lakh automatically."
+        },
+        {
+          "claim": "Application through NSP and merit-based selection",
+          "verification_status": "official_document_copy",
+          "source_ids": [
+            "s1",
+            "s4",
+            "s6"
+          ],
+          "note": "Sources are not a live-verified 2026-27 scheme page."
+        }
+      ]
+    },
+    {
+      "chunk_id": "pragati_amount_conflict",
+      "text": "The amount is INR 50,000 per year by DBT. Whether it is tuition up to INR 30,000 plus INR 2,000 a month for 10 months, or a lump sum for fees, books and equipment, is unverified for 2026-27. DocMitra must not state either breakdown as current fact.",
+      "tags": [
+        "amount",
+        "conflict"
+      ],
+      "verification_status": "conflicting",
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "chunk_id": "pragati_dates_2026_27",
+      "text": "Third-party pages list these 2026-27 dates: NSP opened 1 June 2026; students apply by 31 October 2026; defective-application and institute verification by 15 November 2026; DNO/SNO/MNO verification by 30 November 2026. These were not confirmed on the live NSP page and extensions can happen, so students must check scholarships.gov.in.",
+      "tags": [
+        "dates",
+        "deadline",
+        "verification"
+      ],
+      "verification_status": "secondary_source",
+      "source_ids": [
+        "s7"
+      ]
+    },
+    {
+      "chunk_id": "pragati_income",
+      "text": "Family income limit is INR 8 lakh per year from all sources; for a married girl the higher income of parents or in-laws is considered. The certificate must be from a competent authority such as Tehsildar, with signature and stamp. Whether the certificate should be for the current or the preceding financial year is conflicting across sources, so the student should confirm on NSP or with the institute. Exactly INR 8 lakh is also unclear because the wording varies between 'less than' and 'not more than'. A recheck of 2026-27 third-party pages mostly says 'preceding' while AICTE FAQ text says 'current', so the year stays unresolved.",
+      "tags": [
+        "income",
+        "documents",
+        "conflict"
+      ],
+      "verification_status": "conflicting",
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "chunk_id": "pragati_documents",
+      "text": "AICTE FAQ text lists: Class 10 certificate and marksheet; Class 12 for Degree level; ITI certificate for lateral entry to Diploma or Diploma certificate for lateral entry to Degree; category certificate if applicable; study or bonafide certificate; annual family income certificate; parent declaration; promotion certificate for renewal. Aadhaar and an Aadhaar-seeded bank account in the student's name are mandatory. Photo and signature sizes, admission letter, tuition fee receipt, domicile certificate and bank mandate were not confirmed from AICTE text; students should follow the live NSP upload page.",
+      "tags": [
+        "documents"
+      ],
+      "verification_status": "mixed",
+      "source_ids": [
+        "s3"
+      ],
+      "claim_verification": [
+        {
+          "claim": "Core and conditional document list from AICTE FAQ Q22",
+          "verification_status": "official_document_copy",
+          "source_ids": [
+            "s3"
+          ],
+          "note": "AICTE-authored FAQ text in an institute-hosted copy; current upload fields not verified."
+        },
+        {
+          "claim": "Photo/signature size limits and commonly requested extra documents",
+          "verification_status": "not_found",
+          "source_ids": [
+            "s3"
+          ],
+          "note": "Do not enforce these as current requirements; check live NSP upload fields."
+        }
+      ]
+    },
+    {
+      "chunk_id": "pragati_bank_account",
+      "text": "Scholarship is paid only by DBT into a general savings account in the student's own name that is Aadhaar-seeded. Joint, minor and FRILL accounts are not accepted. No official list of accepted banks was found; use the list shown on NSP.",
+      "tags": [
+        "bank",
+        "documents"
+      ],
+      "verification_status": "official_document_copy",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "chunk_id": "pragati_other_scholarship",
+      "text": "AICTE FAQ text says a student who receives a Central Government, State Government or AICTE-sponsored scholarship may not be eligible. This was not confirmed on the live NSP page, so DocMitra treats it as an advisory prompt only: it asks the student to confirm with the institute or NSP and never rejects her on this basis. Private or non-government scholarships are not covered by a confirmed rule.",
+      "tags": [
+        "eligibility",
+        "other_scholarship"
+      ],
+      "verification_status": "not_found",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "chunk_id": "pragati_renewal",
+      "text": "Renewal is done on NSP with a Promotion Certificate certified by the Head of Institution. A student who fails or drops out is not eligible for further scholarship. No minimum marks or attendance rule was found, so none should be quoted. Renewal uses the same listed deadline as fresh applications (secondary_source).",
+      "tags": [
+        "renewal"
+      ],
+      "verification_status": "mixed",
+      "source_ids": [
+        "s3",
+        "s7"
+      ],
+      "claim_verification": [
+        {
+          "claim": "Renewal uses a Promotion Certificate certified by the Head of Institution; failure/drop-out affects continuation",
+          "verification_status": "official_document_copy",
+          "source_ids": [
+            "s3"
+          ],
+          "note": "Based on copied AICTE FAQ text."
+        },
+        {
+          "claim": "Renewal deadline matches fresh-application deadline",
+          "verification_status": "secondary_source",
+          "source_ids": [
+            "s7"
+          ],
+          "note": "Not confirmed on the live NSP portal."
+        }
+      ]
+    },
+    {
+      "chunk_id": "pragati_rejection",
+      "text": "AICTE lists these reasons for direct rejection: non-technical course or course not approved by AICTE, institute not approved, incomplete or wrong information, dual-degree course and post-graduate course. Certificates are rejected if blurred, unsigned, unstamped, in the wrong name or from the wrong authority. The AICTE list also mentions availing a scholarship from other sources, but DocMitra treats that as advisory only because its scope was not confirmed on the live NSP page; see the other-scholarship chunk.",
+      "tags": [
+        "rejection"
+      ],
+      "verification_status": "mixed",
+      "source_ids": [
+        "s3"
+      ],
+      "claim_verification": [
+        {
+          "claim": "AICTE FAQ-listed rejection reasons and certificate-quality issues",
+          "verification_status": "official_document_copy",
+          "source_ids": [
+            "s3"
+          ],
+          "note": "Based on copied AICTE FAQ text."
+        },
+        {
+          "claim": "How the other-scholarship rejection wording applies in 2026-27",
+          "verification_status": "not_found",
+          "source_ids": [
+            "s3"
+          ],
+          "note": "Keep as advisory only; do not reject an applicant based on this alone."
+        }
+      ]
+    }
+  ],
+  "eligibility_rules": [
+    {
+      "rule_id": "gender_female_only",
+      "field": "gender",
+      "condition": {
+        "operator": "equals_case_insensitive",
+        "value": "female"
+      },
+      "effect": "condition_passed",
+      "rule_type": "hard_rule",
+      "verification_status": "official_document_copy",
+      "source_ids": [
+        "s3"
+      ],
+      "description": "The scheme is for female students."
+    },
+    {
+      "rule_id": "course_level_supported",
+      "field": "course_level",
+      "condition": {
+        "operator": "in",
+        "value": [
+          "degree",
+          "diploma"
+        ]
+      },
+      "effect": "condition_passed",
+      "rule_type": "hard_rule",
+      "verification_status": "official_document_copy",
+      "source_ids": [
+        "s3"
+      ],
+      "description": "Evaluate under the corresponding Technical Degree or Technical Diploma scheme."
+    },
+    {
+      "rule_id": "third_year_or_later_fresh_not_eligible",
+      "field": "admission_type",
+      "condition": {
+        "operator": "in",
+        "value": [
+          "third_year_or_later"
+        ]
+      },
+      "effect": "likely_not_eligible",
+      "rule_type": "hard_rule",
+      "verification_status": "official_document_copy",
+      "source_ids": [
+        "s3"
+      ],
+      "description": "AICTE FAQ text says a student in the third year of a Degree/Diploma course is not eligible as a fresh applicant."
+    },
+    {
+      "rule_id": "regular_second_year_unresolved",
+      "field": "admission_type",
+      "condition": {
+        "operator": "equals",
+        "value": "regular_second_year"
+      },
+      "effect": "unknown_confirm_needed",
+      "rule_type": "uncertainty_rule",
+      "verification_status": "not_found",
+      "source_ids": [
+        "s3"
+      ],
+      "description": "The reviewed source does not clearly establish eligibility for a regular second-year fresh applicant."
+    },
+    {
+      "rule_id": "renewal_existing_awardee_route",
+      "field": "admission_type",
+      "condition": {
+        "operator": "equals",
+        "value": "renewal_existing_awardee"
+      },
+      "effect": "use_renewal_route",
+      "rule_type": "workflow_rule",
+      "verification_status": "official_document_copy",
+      "source_ids": [
+        "s3"
+      ],
+      "description": "Route existing awardees to renewal checks rather than fresh-applicant checks."
+    },
+    {
+      "rule_id": "current_year_aicte_approval",
+      "field": "institute_and_course_aicte_approved_this_year",
+      "condition": {
+        "operator": "equals",
+        "value": false
+      },
+      "effect": "likely_not_eligible",
+      "rule_type": "hard_rule",
+      "verification_status": "official_document_copy",
+      "source_ids": [
+        "s3"
+      ],
+      "description": "A course or institute not approved by AICTE for the applicable year is listed as a rejection reason."
+    },
+    {
+      "rule_id": "current_year_aicte_approval_unknown",
+      "field": "institute_and_course_aicte_approved_this_year",
+      "condition": {
+        "operator": "is_unknown",
+        "value": true
+      },
+      "effect": "unknown_confirm_needed",
+      "rule_type": "uncertainty_rule",
+      "verification_status": "official_document_copy",
+      "source_ids": [
+        "s3"
+      ],
+      "description": "Ask the student to confirm current-year course and institute approval."
+    },
+    {
+      "rule_id": "course_type_excluded",
+      "field": "course_is_technical_degree_or_diploma_not_dual_degree_or_pg",
+      "condition": {
+        "operator": "equals",
+        "value": false
+      },
+      "effect": "likely_not_eligible",
+      "rule_type": "hard_rule",
+      "verification_status": "official_document_copy",
+      "source_ids": [
+        "s3"
+      ],
+      "description": "Non-technical, dual-degree and postgraduate courses are listed among rejection reasons."
+    },
+    {
+      "rule_id": "income_below_limit",
+      "field": "annual_family_income_inr",
+      "condition": {
+        "operator": "less_than",
+        "value": 800000
+      },
+      "effect": "income_condition_passed",
+      "rule_type": "hard_rule",
+      "verification_status": "official_document_copy",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "description": "Income below INR 8 lakh satisfies the stated threshold; this alone does not establish overall eligibility."
+    },
+    {
+      "rule_id": "income_exact_limit_unresolved",
+      "field": "annual_family_income_inr",
+      "condition": {
+        "operator": "equals",
+        "value": 800000
+      },
+      "effect": "unknown_confirm_needed",
+      "rule_type": "uncertainty_rule",
+      "verification_status": "conflicting",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "description": "Sources differ between less than and not more than INR 8 lakh."
+    },
+    {
+      "rule_id": "income_above_limit",
+      "field": "annual_family_income_inr",
+      "condition": {
+        "operator": "greater_than",
+        "value": 800000
+      },
+      "effect": "likely_not_eligible",
+      "rule_type": "hard_rule",
+      "verification_status": "official_document_copy",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "description": "Income above INR 8 lakh exceeds the stated threshold."
+    },
+    {
+      "rule_id": "income_unknown",
+      "field": "annual_family_income_inr",
+      "condition": {
+        "operator": "is_unknown",
+        "value": true
+      },
+      "effect": "unknown_confirm_needed",
+      "rule_type": "input_required",
+      "verification_status": "official_document_copy",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "description": "Ask for the annual family income before evaluating the income condition."
+    },
+    {
+      "rule_id": "more_than_two_girl_children",
+      "field": "girl_children_in_family_already_availing_or_applying",
+      "condition": {
+        "operator": "greater_than",
+        "value": 2
+      },
+      "effect": "likely_not_eligible",
+      "rule_type": "hard_rule",
+      "verification_status": "official_document_copy",
+      "source_ids": [
+        "s3",
+        "s6"
+      ],
+      "description": "The reviewed scheme information states a maximum of two girl children per family."
+    },
+    {
+      "rule_id": "invalid_bank_account_type",
+      "field": "bank_account_own_name_aadhaar_seeded_general_savings",
+      "condition": {
+        "operator": "equals",
+        "value": false
+      },
+      "effect": "bank_requirement_flag",
+      "rule_type": "document_requirement",
+      "verification_status": "official_document_copy",
+      "source_ids": [
+        "s3"
+      ],
+      "description": "Flag the account requirement; do not convert this into an overall eligibility rejection."
+    },
+    {
+      "rule_id": "income_certificate_year_advisory",
+      "field": "income_financial_year_on_certificate",
+      "condition": {
+        "operator": "is_unknown",
+        "value": true
+      },
+      "effect": "advisory_confirm_with_nsp_or_institute",
+      "rule_type": "advisory",
+      "verification_status": "conflicting",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s9"
+      ],
+      "description": "The applicable financial year is unresolved; do not decide eligibility based on it."
+    },
+    {
+      "rule_id": "centralised_admission_advisory",
+      "field": "admitted_through_centralised_counselling_or_management_quota",
+      "condition": {
+        "operator": "is_true_or_unknown",
+        "value": true
+      },
+      "effect": "advisory_confirm_with_nsp_or_institute",
+      "rule_type": "advisory",
+      "verification_status": "conflicting",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s9"
+      ],
+      "description": "Sources conflict; never use this field alone to mark an applicant ineligible."
+    },
+    {
+      "rule_id": "other_scholarship_advisory",
+      "field": "other_scholarship_status",
+      "condition": {
+        "operator": "is_true_or_unknown",
+        "value": true
+      },
+      "effect": "advisory_confirm_with_nsp_or_institute",
+      "rule_type": "advisory",
+      "verification_status": "not_found",
+      "source_ids": [
+        "s3"
+      ],
+      "description": "Use only as an advisory prompt. Never reject an applicant on this basis."
+    }
+  ]
+}
