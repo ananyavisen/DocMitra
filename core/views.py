@@ -1,7 +1,10 @@
 
 import uuid
+from uuid import UUID
+import time
 from core.serializers import DocumentUploadSerializer
 from pathlib import Path
+from django.http import FileResponse
 from core.serializers import DocumentProcessSerializer
 from core.services.document_processor import process_image_document
 from django.conf import settings
@@ -267,6 +270,7 @@ def process_document_api(request):
 
     input_path = input_dir / "original_upload"
     output_path = input_dir / "processed.pdf"
+    metadata_path = input_dir / "created_at.txt"
 
     try:
         with input_path.open("wb") as destination:
@@ -287,12 +291,13 @@ def process_document_api(request):
                 {"job_id": job_id, "error": "Document validation failed.", "details": result},
                 status=status.HTTP_400_BAD_REQUEST,
             )
-
+        metadata_path.write_text(str(time.time()), encoding="utf-8")
         return Response(
             {
                 "job_id": job_id,
                 "doc_id": doc_id,
                 "processing": result,
+                "download_url": f"/api/jobs/{job_id}/download",
             },
             status=status.HTTP_200_OK,
         )
@@ -309,3 +314,55 @@ def process_document_api(request):
         # Keep successful output until a download/retention flow is implemented.
         if not output_path.exists():
             input_dir.rmdir() if input_dir.exists() and not any(input_dir.iterdir()) else None
+@api_view(["GET"])
+def download_processed_document(request, job_id):
+    try:
+        UUID(job_id, version=4)
+    except ValueError:
+         return Response(
+            {"error": "Invalid job ID."},
+            status=status.HTTP_400_BAD_REQUEST,
+        )
+    job_dir = settings.MEDIA_ROOT / "processing" / job_id
+    pdf_path = job_dir / "processed.pdf"
+    metadata_path = job_dir / "created_at.txt"
+
+    if not pdf_path.is_file() or not metadata_path.is_file():
+        return Response(
+            {"error": "Document not found or expired."},
+            status=status.HTTP_404_NOT_FOUND,
+        )
+
+    try:
+        created_at = float(
+            metadata_path.read_text(encoding="utf-8")
+        )
+    except (ValueError, OSError):
+        return Response(
+            {"error": "Document metadata is invalid."},
+            status=status.HTTP_404_NOT_FOUND,
+        )
+
+    if time.time() - created_at > 60 * 60:
+        try:
+            pdf_path.unlink(missing_ok=True)
+            metadata_path.unlink(missing_ok=True)
+
+            if job_dir.exists() and not any(job_dir.iterdir()):
+                 job_dir.rmdir()
+
+        except OSError:
+             return Response(
+            {"error": "Expired document cleanup failed."},
+            status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+        )
+
+        return Response(
+        {"error": "Download link expired."},
+        status=status.HTTP_410_GONE,
+        )
+    return FileResponse(
+        open(pdf_path, "rb"),
+        as_attachment=True,
+        filename="processed.pdf",
+        content_type="application/pdf",)
