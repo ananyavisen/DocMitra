@@ -2,7 +2,8 @@
 import uuid
 from core.serializers import DocumentUploadSerializer
 from pathlib import Path
-
+from core.serializers import DocumentProcessSerializer
+from core.services.document_processor import process_image_document
 from django.conf import settings
 from rest_framework import status
 from rest_framework.decorators import api_view, parser_classes
@@ -13,6 +14,10 @@ from core.services.image_processor import process_image as process_image_file
 from core.services.validator import validate_file
 from core.serializers import PDFProcessSerializer
 from core.services.pdf_processor import process_pdf
+from core.services.requirements_provider import (
+    get_checklist,
+    get_document_catalogue,
+)
 
 MAX_FILE_SIZE = 10 * 1024 * 1024  # 10 MB
 
@@ -200,3 +205,107 @@ def process_pdf_api(request):
     finally:
         input_path.unlink(missing_ok=True)
 
+
+@api_view(["GET"])
+def document_checklist_api(request):
+    student_type = request.query_params.get("student_type")
+
+    if not student_type:
+        return Response(
+            {"error": "student_type query parameter is required."},
+            status=status.HTTP_400_BAD_REQUEST,
+        )
+
+    checklist = get_checklist(student_type)
+
+    if checklist is None:
+        return Response(
+            {"error": "Invalid student_type."},
+            status=status.HTTP_400_BAD_REQUEST,
+        )
+
+    catalogue = get_document_catalogue()
+    documents = catalogue.get("documents", [])
+
+    documents_by_id = {
+        document["doc_id"]: document
+        for document in documents
+        if "doc_id" in document
+    }
+
+    result = {}
+
+    for section, document_ids in checklist.items():
+        if not isinstance(document_ids, list):
+            continue
+
+        result[section] = [
+            documents_by_id[doc_id]
+            for doc_id in document_ids
+            if doc_id in documents_by_id
+        ]
+
+    return Response({
+        "student_type": student_type,
+        "checklist": result,
+    })
+
+
+@api_view(["POST"])
+@parser_classes([MultiPartParser, FormParser])
+def process_document_api(request):
+    serializer = DocumentProcessSerializer(data=request.data)
+    serializer.is_valid(raise_exception=True)
+
+    uploaded = serializer.validated_data["file"]
+    doc_id = serializer.validated_data["doc_id"]
+    min_size_kb = serializer.validated_data["min_size_kb"]
+    max_size_kb = serializer.validated_data["max_size_kb"]
+    job_id = str(uuid.uuid4())
+    input_dir = settings.MEDIA_ROOT / "processing" / job_id
+    input_dir.mkdir(parents=True, exist_ok=True)
+
+    input_path = input_dir / "original_upload"
+    output_path = input_dir / "processed.pdf"
+
+    try:
+        with input_path.open("wb") as destination:
+            for chunk in uploaded.chunks():
+                destination.write(chunk)
+
+        result = process_image_document(
+            input_path,
+            output_path,
+            doc_id=doc_id,
+            min_size_kb=min_size_kb,
+            max_size_kb=max_size_kb,
+            min_ssim=0.95,
+        )
+
+        if not result["valid"]:
+            return Response(
+                {"job_id": job_id, "error": "Document validation failed.", "details": result},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        return Response(
+            {
+                "job_id": job_id,
+                "doc_id": doc_id,
+                "processing": result,
+            },
+            status=status.HTTP_200_OK,
+        )
+
+    except (ValueError, OSError) as exc:
+        return Response(
+            {"job_id": job_id, "error": str(exc)},
+            status=status.HTTP_400_BAD_REQUEST,
+        )
+
+    finally:
+        input_path.unlink(missing_ok=True)
+          # Remove partial output after a failed request.
+        # Keep successful output until a download/retention flow is implemented.
+        if not output_path.exists():
+            input_dir.rmdir() if input_dir.exists() and not any(input_dir.iterdir()) else None
