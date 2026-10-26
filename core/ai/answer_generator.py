@@ -155,6 +155,31 @@ def _format_evidence(results: list[RetrievalResult]) -> str:
     return "\n\n--- EVIDENCE SEPARATOR ---\n\n".join(evidence_blocks)
 
 
+def _select_evidence(
+    query: str,
+    retrieved: list[RetrievalResult],
+ ) -> list[RetrievalResult]:
+    """Select relevant evidence while preserving important conflicts."""
+    if not retrieved:
+        return []
+
+    query_lower = query.lower()
+    selected = list(retrieved)
+
+    # Amount questions must retain both the amount conflict and overview
+    # when those chunks are available.
+    if any(term in query_lower for term in ("amount", "financial assistance", "how much")):
+        required_ids = {"pragati_amount_conflict", "pragati_overview"}
+        selected_ids = {result.chunk_id for result in selected}
+
+        for result in retrieved:
+            if result.chunk_id in required_ids and result.chunk_id not in selected_ids:
+                selected.append(result)
+                selected_ids.add(result.chunk_id)
+
+    return selected
+
+
 def generate_answer(
     query: str,
     knowledge_base: KnowledgeBase,
@@ -195,6 +220,7 @@ def generate_answer(
             "Could not retrieve evidence from the knowledge base."
         ) from exc
 
+    retrieved = _select_evidence(query.strip(), retrieved)
     # Step 2: Prepare structured references for the caller.
     sources = tuple(
         AnswerSource(
@@ -228,7 +254,8 @@ def generate_answer(
             model=_get_model_name(),
         )
 
-    evidence = _format_evidence(retrieved)
+    selected_evidence = _select_evidence(query.strip(), retrieved)
+    evidence = _format_evidence(selected_evidence)
 
     user_prompt = f"""
 USER QUESTION:
