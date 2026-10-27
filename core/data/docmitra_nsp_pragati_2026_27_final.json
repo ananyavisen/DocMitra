@@ -719,12 +719,11 @@
       "s9"
     ],
     "general_rules": [
-      "The AICTE FAQ upload list (Q22) was read through an institute-hosted copy, not the live 2026-27 NSP upload page. The student must follow the live NSP page for the final list.",
-      "Photo and signature size and format limits, and limits for other documents, are NOT verified for 2026-27. DocMitra must tell the student to follow the limits shown on the live NSP upload page.",
-      "A 2025-26 college summary quotes passport photo up to 200 KB and signature up to 50 KB. This is a college-authored summary and is not treated as confirmed.",
-      "Student name, date of birth and parent names should match across documents.",
-      "Do not ask the student to paste document numbers into chat."
-    ],
+  "The user-provided screenshot of the official NSP 2026-27 upload page displays PDF, JPG, and JPEG formats and a file-size range of 20 KB to 500 KB. This evidence applies to the captured page only. Source: s11.",
+  "A 2025-26 college summary quotes passport photo up to 200 KB and signature up to 50 KB. These claims are secondary-source information and must not override the requirements displayed on the applicable official portal page.",
+  "Student name, date of birth, and parent names should match across documents.",
+  "Do not ask the student to paste document numbers into chat."
+],
     "documents": [
       {
         "doc_id": "aadhaar",
@@ -768,7 +767,7 @@
         "condition": "Listed by AICTE FAQ for Degree level. Whether it is needed for lateral-entry degree students (who may come through diploma) was not confirmed.",
         "verification_status": "official_document_copy",
         "source_ids": [
-          "s3"
+          "s3", "s11"
         ]
       },
       {
@@ -825,7 +824,7 @@
         "verification_status": "official_document_copy",
         "source_ids": [
           "s3",
-          "s6"
+          "s6", "s11"
         ],
         "note": "Because it includes the NSP Application ID, it is usually obtained after the student registers or submits. Confirm the timing with the institute.",
         "recheck_note": "A 2026-27 third-party page lists 'bonafide or admission certificate from your AICTE-approved institute', which suggests institutes may accept either; not confirmed. Ask the institute which one NSP needs."
@@ -857,7 +856,7 @@
         "verification_status": "conflicting",
         "source_ids": [
           "s3",
-          "s4"
+          "s4","s11"
         ],
         "tips": [
           "Must be in the name of the applicant or a family member",
@@ -953,7 +952,8 @@
         "condition": "Only if the student claims a category (AICTE FAQ Q22: 'Category, if applicable'). A college summary mentions an attested copy for SC/ST/OBC.",
         "verification_status": "official_document_copy",
         "source_ids": [
-          "s3"
+          "s3",
+          "s11"
         ]
       },
       {
@@ -998,7 +998,7 @@
         "evidence": "Appears only in third-party lists. AICTE Appendix I only asks the institute to record the student's domicile state.",
         "verification_status": "not_found",
         "source_ids": [
-          "s9"
+          "s9","s11"
         ],
         "instruction": "Do not tell students it is required; ask them to check NSP."
       },
@@ -1613,6 +1613,24 @@
         "https://sarsaeducation.com/aicte-pragati-scholarship/"
       ],
       "caution": "Not equivalent to official guidelines."
+    },
+    {
+      "id": "s11",
+      "title": "National Scholarship Portal 2026-27 application upload page screenshot",
+      "source_type": "official_portal_screenshot",
+      "access_method": "user_provided_screenshot",
+      "captured_on": "2026-10-27",
+      "checked_live_2026_27": true,
+      "supports": [
+        "Upload formats displayed on the captured page: PDF, JPG, JPEG",
+        "Upload file-size range displayed on the captured page: 20 KB to 500 KB",
+        "Scanned copy of marksheet of last academic qualification listed",
+        "AICTE Bonafide/Promotion Certificate listed with a Proforma button",
+        "Domicile Certificate listed",
+        "Caste Certificate issued by the Designated State/UT Authority listed",
+        "Income Certificate issued by the Designated State/UT Authority listed"
+      ],
+      "caution": "Evidence is limited to the visible portion of the user-provided screenshot. It does not establish requirements for every document category, student type, or scholarship scheme."
     }
   ],
   "rag_chunks": [

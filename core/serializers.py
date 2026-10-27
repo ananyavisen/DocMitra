@@ -62,16 +62,38 @@ class PDFProcessSerializer(serializers.Serializer):
         return uploaded_file
 
 
-
 class DocumentProcessSerializer(serializers.Serializer):
-    file = serializers.ImageField()
+    file = serializers.FileField()
     doc_id = serializers.CharField(max_length=100)
-    min_size_kb = serializers.IntegerField(min_value=1, required=False, default=1)
-    max_size_kb = serializers.IntegerField(min_value=1, max_value=10240, required=False, default=200)
+
+    min_size_kb = serializers.IntegerField(
+        min_value=1,
+        required=False,
+        default=1,
+    )
+    max_size_kb = serializers.IntegerField(
+        min_value=1,
+        max_value=10240,
+        required=False,
+        default=200,
+    )
+
+    width = serializers.IntegerField(
+        min_value=1,
+        max_value=5000,
+        required=False,
+    )
+    height = serializers.IntegerField(
+        min_value=1,
+        max_value=5000,
+        required=False,
+    )
 
     def validate_file(self, uploaded_file):
         if uploaded_file.size == 0:
-            raise serializers.ValidationError("The uploaded image is empty.")
+            raise serializers.ValidationError(
+                "The uploaded file is empty."
+            )
 
         if uploaded_file.size > 10 * 1024 * 1024:
             raise serializers.ValidationError(
@@ -81,16 +103,13 @@ class DocumentProcessSerializer(serializers.Serializer):
         return uploaded_file
 
     def validate_doc_id(self, value):
-        from core.services.requirements_provider import get_document_by_id
+        from core.services.requirements_provider import RequirementsProvider
 
-        document = get_document_by_id(value)
+        provider = RequirementsProvider()
 
-        if not document:
-            raise serializers.ValidationError("Unknown document ID.")
-
-        if value in {"passport_photo", "signature"}:
+        if value not in provider.documents:
             raise serializers.ValidationError(
-                "Passport photos and signatures must use their own processing workflow."
+                "Unknown document ID."
             )
 
         return value
@@ -100,4 +119,30 @@ class DocumentProcessSerializer(serializers.Serializer):
             raise serializers.ValidationError(
                 "min_size_kb cannot exceed max_size_kb."
             )
+
+        if ("width" in attrs) != ("height" in attrs):
+            raise serializers.ValidationError(
+                "Provide both width and height for image processing."
+            )
+
+        if attrs["doc_id"] in {"passport_photo", "signature"}:
+            if "width" not in attrs or "height" not in attrs:
+                raise serializers.ValidationError({
+                    "width": (
+                        "Provide configured image dimensions for "
+                        "passport photos and signatures."
+                    ),
+                    "height": (
+                        "Provide configured image dimensions for "
+                        "passport photos and signatures."
+                    ),
+                })
+
+            if "max_size_kb" not in self.initial_data:
+                raise serializers.ValidationError({
+                    "max_size_kb": (
+                        "Provide the applicable image-size limit."
+                    )
+                })
+
         return attrs

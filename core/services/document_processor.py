@@ -4,7 +4,7 @@ from pathlib import Path
 from core.services.image_to_pdf import image_to_pdf
 from core.services.quality_validator import validate_image_quality
 from core.services.validator import validate_file
-from core.services.requirements_provider import get_document_by_id
+from core.services.requirements_provider import RequirementsProvider
 
 
 def process_image_document(
@@ -13,7 +13,7 @@ def process_image_document(
     doc_id=None,
     min_size_kb=50,
     max_size_kb=200,
-    min_ssim=0.95,
+    min_ssim=0.83,
 ):
     """Convert eligible document images to PDF and validate the result."""
 
@@ -21,7 +21,7 @@ def process_image_document(
     output_path = Path(output_path)
 
     if doc_id is not None:
-        document = get_document_by_id(doc_id)
+        document = RequirementsProvider().documents.get(doc_id)
 
         if not document:
             raise ValueError(f"Unknown document ID: {doc_id}")
@@ -40,6 +40,7 @@ def process_image_document(
             output_path,
             min_size_kb=min_size_kb,
             max_size_kb=max_size_kb,
+            min_ssim=min_ssim,
         )
 
         file_validation = validate_file(
@@ -81,7 +82,7 @@ def process_image_document(
 def get_document_processing_policy(doc_id):
     """Return document metadata and upload-limit verification status."""
 
-    document = get_document_by_id(doc_id)
+    document = RequirementsProvider().documents.get(doc_id)
 
     if not document:
         raise ValueError(f"Unknown document ID: {doc_id}")

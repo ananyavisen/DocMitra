@@ -9,6 +9,8 @@ from typing import Any, Callable
 
 from django.conf import settings
 
+from functools import partial
+from core.services.image_to_pdf import image_to_pdf
 from core.services.image_processor import process_image
 from core.services.pdf_processor import process_pdf
 from core.services.validator import validate_file
@@ -48,9 +50,21 @@ class DocumentOrchestrator:
         requirements_provider: RequirementsProvider | None = None,
     ):
         self.requirements_path = Path(requirements_path)
-        self.image_to_pdf_converter = image_to_pdf_converter
-
         self.requirements = self._load_requirements()
+
+        self.max_size_kb = self.requirements.get(
+            "global_document_rules", {}
+        ).get("max_size_kb", 200)
+
+        min_size_kb = self.requirements.get(
+            "global_document_rules", {}
+        ).get("min_size_kb", 50)
+
+        self.image_to_pdf_converter = image_to_pdf_converter or partial(
+            image_to_pdf,
+            min_size_kb=min_size_kb,
+            max_size_kb=self.max_size_kb,
+        )
 
         self.requirements_provider = (
             requirements_provider or RequirementsProvider()
