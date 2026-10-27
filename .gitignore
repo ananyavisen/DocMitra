@@ -5,3 +5,8 @@ __pycache__/
 .env
 db.sqlite3
 .vscode/
+# Uploaded and processed files
+media/
+
+# Python test cache
+.pytest_cache/
