@@ -35,6 +35,7 @@ psycopg-binary==3.3.6
 pydantic==2.14.1
 pydantic_core==2.50.1
 Pygments==2.21.0
+pypdf==6.21.2
 python-dotenv==1.2.4
 PyYAML==6.0.3
 regex==2026.9.29

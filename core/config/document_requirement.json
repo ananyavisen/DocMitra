@@ -1,0 +1,22 @@
+{
+    "scheme": "AICTE Pragati",
+    "global_document_rules": {
+      "allowed_extensions": [".pdf"],
+      "allowed_mime_types": ["application/pdf"],
+      "min_size_kb": 50,
+      "max_size_kb": 200,
+      "min_size_inclusive": true,
+      "max_size_inclusive": true
+    },
+    "validation": {
+      "check_file_exists": true,
+      "verify_actual_file_type": true,
+      "check_pdf_integrity": true,
+      "check_file_size": true
+    },
+    "processing": {
+      "max_attempts": 3,
+      "delete_invalid_processed_output": true,
+      "preserve_original_upload": true
+    }
+}
