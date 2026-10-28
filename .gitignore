@@ -1,12 +1,31 @@
+```gitignore
+# Python virtual environment
 venv/
 .venv/
+
+# Python cache
 __pycache__/
 *.py[cod]
+.pytest_cache/
+
+# Environment variables
 .env
+.env.*
+
+# Database
 db.sqlite3
+
+# Editor settings
 .vscode/
+
 # Uploaded and processed files
 media/
 
-# Python test cache
-.pytest_cache/
+# Node.js dependencies
+node_modules/
+DocMitra-frontend/node_modules/
+
+# Frontend build files
+dist/
+DocMitra-frontend/dist/
+```
